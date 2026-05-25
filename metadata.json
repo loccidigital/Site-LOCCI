@@ -1,0 +1,6 @@
+{
+  "name": "LOCCI Digital",
+  "description": "Site institucional e landing pages premium de alta conversão para a agência LOCCI Digital, com diagnóstico estratégico em tempo real via IA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
