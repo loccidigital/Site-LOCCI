@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Sparkles, ArrowRight } from "lucide-react";
+import logoLocci from "../public/logo-locci.png";
 
 interface HeaderProps {
   currentTab: string;
@@ -55,24 +56,19 @@ export default function Header({ currentTab, setCurrentTab, openDiagnosticModal 
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <div 
+        <div
           onClick={() => handleNavClick("home")}
           className="flex items-center gap-2 cursor-pointer group"
           id="logo-container"
         >
-          <div className="relative w-9 h-9 flex items-center justify-center rounded-lg bg-gradient-to-tr from-gold-600 to-gold-200 p-[1px]">
-            <div className="w-full h-full bg-navy-950 rounded-[7px] flex items-center justify-center">
-              <span className="text-gold-500 font-display font-black text-lg tracking-widest group-hover:scale-105 transition-transform">L</span>
-            </div>
-            {/* Absolute accent dots representing connectivity */}
-            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-blue-500 rounded-full animate-ping" />
-            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-blue-500 rounded-full" />
-          </div>
-          <div>
-            <span className="text-white font-display font-semibold text-xl tracking-wider uppercase">
-              LOCCI <span className="text-gold-500 font-light">Digital</span>
-            </span>
-          </div>
+          <img
+            src={logoLocci}
+            alt="LOCCI"
+            className="h-10 w-auto group-hover:scale-105 transition-transform"
+          />
+          <span className="text-white font-display font-semibold text-xl tracking-wider uppercase">
+            LOCCI
+          </span>
         </div>
 
         {/* Desktop Navigation */}
@@ -98,7 +94,7 @@ export default function Header({ currentTab, setCurrentTab, openDiagnosticModal 
         <div className="hidden lg:flex items-center gap-4">
           <button
             onClick={openDiagnosticModal}
-            className="group px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase text-navy-950 bg-gradient-to-r from-gold-500 via-gold-200 to-gold-600 hover:opacity-95 transition-all shadow-lg hover:shadow-gold-500/20 flex items-center gap-2 cursor-pointer"
+            className="group px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase text-white bg-gradient-to-r from-gold-500 to-gold-600 hover:opacity-90 transition-all shadow-lg hover:shadow-gold-500/20 flex items-center gap-2 cursor-pointer"
             id="header-cta-button"
           >
             <Sparkles className="w-3.5 h-3.5" />
@@ -142,14 +138,14 @@ export default function Header({ currentTab, setCurrentTab, openDiagnosticModal 
                 setIsOpen(false);
                 openDiagnosticModal();
               }}
-              className="w-full text-center group py-3.5 rounded-xl font-semibold text-sm tracking-wider uppercase text-navy-950 bg-gradient-to-r from-gold-500 to-gold-200 flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full text-center group py-3.5 rounded-xl font-semibold text-sm tracking-wider uppercase text-white bg-gradient-to-r from-gold-500 to-gold-600 flex items-center justify-center gap-2 cursor-pointer"
               id="mobile-menu-cta"
             >
               <Sparkles className="w-4 h-4" />
               Obter Meu Diagnóstico
             </button>
             <p className="text-center text-xs text-gray-500 font-mono">
-              ★ LOCCI DIGITAL — MARKETING QUE FUNCIONA
+              ★ LOCCI — MARKETING QUE FUNCIONA
             </p>
           </div>
         </div>
