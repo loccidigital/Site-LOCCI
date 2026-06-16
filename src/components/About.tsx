@@ -54,7 +54,7 @@ export default function About() {
   ];
 
   return (
-    <section id="sobre" className="relative py-24 bg-gold-50/70 overflow-hidden">
+    <section id="sobre" className="relative py-24 bg-[#F6F6F6] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Storytelling introduction */}
