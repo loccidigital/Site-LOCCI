@@ -66,7 +66,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-navy-950 text-gray-100 flex flex-col font-sans select-none antialiased relative">
-      
+
       {/* Premium Translucent Header Menu */}
       <Header
         currentTab={currentTab}
@@ -106,7 +106,7 @@ export default function App() {
 
       {/* Floating Interactive Conversion widgets */}
       <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3 items-end" id="floating-interaction-dock">
-        
+
         {/* Scroll Top Button */}
         {showScrollTop && (
           <button
@@ -121,7 +121,7 @@ export default function App() {
 
         {/* Sticky Floating WhatsApp Hub bubble */}
         <a
-          href="https://wa.me/5511999999999?text=Ol%C3%A1%21%20Gostaria%20de%20bater%20um%20papo%20e%20saber%20mais%20sobre%20as%20estrat%C3%A9gias%20da%20LOCCI%20Digital."
+          href="https://wa.me/5561994219292?text=Ol%C3%A1%21%20Gostaria%20de%20bater%20um%20papo%20e%20saber%20mais%20sobre%20as%20estrat%C3%A9gias%20da%20LOCCI%20Digital."
           target="_blank"
           rel="noreferrer"
           className="group flex items-center gap-2 bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-500 hover:to-gold-400 text-navy-950 font-bold p-3.5 sm:px-5 sm:py-3.5 rounded-full shadow-2xl hover:scale-[1.03] transition-all cursor-pointer border border-gold-400/20"
