@@ -24,8 +24,8 @@ export default function GoogleCompleto({ onCtaClick }: GoogleCompletoProps) {
     <section id="google-completo" className="relative py-24 bg-[#D9D9D9] border-y border-gold-200/50 overflow-hidden">
 
       {/* Decoração Google colorida por trás do título */}
-      <div className="absolute top-0 left-0 right-0 flex justify-center items-start pt-[15%] sm:pt-[8%] md:pt-[4%] opacity-[0.18] pointer-events-none select-none overflow-hidden">
-        <div className="flex font-black leading-none text-[5rem] sm:text-[8rem] md:text-[11rem] lg:text-[14rem]">
+      <div className="absolute top-0 left-0 right-0 flex justify-center items-start pt-[15%] sm:pt-[8%] md:pt-[4%] opacity-[0.18] pointer-events-none select-none overflow-hidden px-4">
+        <div className="flex font-black leading-none text-[3rem] sm:text-[4.5rem] md:text-[6.5rem] lg:text-[9rem]">
           <span style={{ color: '#4285F4' }}>G</span>
           <span style={{ color: '#EA4335' }}>o</span>
           <span style={{ color: '#FBBC05' }}>o</span>
