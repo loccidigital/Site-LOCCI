@@ -16,10 +16,10 @@ export default function Hero({ onCtaClick }: HeroProps) {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-        
-        {/* Left Side: Text and Strategic Framing */}
+
+        {/* Left Side */}
         <div className="lg:col-span-7 flex flex-col gap-6" id="hero-left-content">
-          
+
           {/* Badge */}
           <div className="inline-flex items-center gap-2 self-start px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold tracking-wider text-gold-500 uppercase animate-fade-in-up" id="hero-badge">
             <Flame className="w-3.5 h-3.5 text-gold-500 fill-gold-500" />
@@ -44,7 +44,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
             className="text-gray-300 text-base sm:text-lg max-w-xl leading-relaxed"
             id="hero-subtitle"
           >
-            Nós transformamos a presença digital de empresas com método e clareza. 
+            Nós transformamos a presença digital de empresas com método e clareza.
             Sem enrolação, sem achismo, apenas estratégia que funciona.
           </p>
 
@@ -52,13 +52,13 @@ export default function Hero({ onCtaClick }: HeroProps) {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-2" id="hero-actions">
             <button
               onClick={onCtaClick}
-              className="group px-8 py-4 rounded-xl text-sm font-bold tracking-wide text-navy-950 bg-gradient-to-r from-gold-500 via-gold-200 to-gold-600 hover:opacity-95 transition-all shadow-xl shadow-gold-500/10 flex items-center justify-center gap-3 cursor-pointer"
+              className="group px-8 py-4 rounded-xl text-sm font-bold tracking-wide text-white bg-gradient-to-r from-gold-500 to-gold-600 hover:opacity-95 transition-all shadow-xl shadow-gold-500/10 flex items-center justify-center gap-3 cursor-pointer"
               id="hero-cta-main"
             >
               Quero transformar meu negócio
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
             </button>
-            
+
             <a
               href="#sobre"
               className="px-6 py-4 rounded-xl text-sm font-semibold text-gray-300 hover:text-white hover:bg-white/5 border border-white/10 transition-all text-center flex items-center justify-center gap-2"
@@ -71,8 +71,8 @@ export default function Hero({ onCtaClick }: HeroProps) {
           {/* Micro Trust Stats */}
           <div className="grid grid-cols-3 gap-6 pt-8 mt-4 border-t border-white/5" id="hero-trust">
             <div>
-              <div className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">40+</div>
-              <p className="text-xs text-gray-500 font-mono tracking-widest uppercase mt-1">Leads/mês Cliente Case</p>
+              <div className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">20+</div>
+              <p className="text-xs text-gray-500 font-mono tracking-widest uppercase mt-1">Clientes Transformados</p>
             </div>
             <div>
               <div className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">100%</div>
@@ -80,7 +80,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
             </div>
             <div>
               <div className="flex items-center gap-1 text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">
-                4.9<Star className="w-4 h-4 text-gold-500 fill-gold-500 inline" />
+                5.0<Star className="w-4 h-4 text-gold-500 fill-gold-500 inline" />
               </div>
               <p className="text-xs text-gray-500 font-mono tracking-widest uppercase mt-1">Satisfação Clientes</p>
             </div>
@@ -88,12 +88,12 @@ export default function Hero({ onCtaClick }: HeroProps) {
 
         </div>
 
-        {/* Right Side: High fidelity interactive CSS design mockup */}
+        {/* Right Side: Dashboard Mockup */}
         <div className="lg:col-span-5 relative mt-8 lg:mt-0 animate-float" id="hero-right-mockup">
-          
+
           {/* Main Dashboard Panel Mockup */}
           <div className="relative mx-auto max-w-[420px] rounded-2xl bg-gradient-to-tr from-white/10 to-white/5 border border-white/10 p-4 shadow-2xl backdrop-blur-md">
-            
+
             {/* Window bar */}
             <div className="flex items-center justify-between pb-3 border-b border-white/5 mb-3">
               <div className="flex gap-1.5">
@@ -110,11 +110,11 @@ export default function Hero({ onCtaClick }: HeroProps) {
               <div className="flex justify-between items-start">
                 <div>
                   <span className="text-[10px] text-gray-400 font-mono uppercase">Campanha Ativa</span>
-                  <p className="font-display font-bold text-white text-lg">Casa Travertino</p>
+                  <p className="font-display font-bold text-white text-lg">Sua Empresa</p>
                 </div>
                 <span className="px-2 py-0.5 rounded-full bg-green-500/10 text-green-400 font-mono text-[9px] font-bold flex items-center gap-1">
                   <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
-					EM EXECUÇÃO
+                  EM EXECUÇÃO
                 </span>
               </div>
 
@@ -123,10 +123,10 @@ export default function Hero({ onCtaClick }: HeroProps) {
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-[10px] text-gray-400 font-mono">Leads Gerados</span>
                   <span className="text-xs font-bold text-gold-500 flex items-center gap-0.5">
-                    +40/mês
+                    +20/mês
                   </span>
                 </div>
-                
+
                 {/* Visual Bar representation */}
                 <div className="flex items-end gap-1.5 h-20 pt-4" id="simulated-bars">
                   <div className="w-full bg-white/5 rounded-t h-[20%] transition-all duration-500 hover:bg-gold-500" />
@@ -157,7 +157,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
                   </div>
                   <div>
                     <span className="text-[9px] text-gray-400 font-mono font-bold">Eventos</span>
-                    <p className="text-xs font-bold text-white">Capture Premium</p>
+                    <p className="text-xs font-bold text-white">Captura Premium</p>
                   </div>
                 </div>
               </div>
