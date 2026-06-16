@@ -21,9 +21,22 @@ export default function GoogleCompleto({ onCtaClick }: GoogleCompletoProps) {
   ];
 
   return (
-    <section id="google-completo" className="relative py-24 bg-gold-50/40 border-y border-gold-200/50 overflow-hidden">
+    <section id="google-completo" className="relative py-24 bg-[#F6F6F6] border-y border-gold-200/50 overflow-hidden">
+
+      {/* Decoração Google colorida por trás do título */}
+      <div className="absolute top-0 left-0 right-0 flex justify-center items-start pt-6 opacity-[0.06] pointer-events-none select-none overflow-hidden">
+        <div className="flex font-black leading-none" style={{ fontSize: '14rem' }}>
+          <span style={{ color: '#4285F4' }}>G</span>
+          <span style={{ color: '#EA4335' }}>o</span>
+          <span style={{ color: '#FBBC05' }}>o</span>
+          <span style={{ color: '#4285F4' }}>g</span>
+          <span style={{ color: '#34A853' }}>l</span>
+          <span style={{ color: '#EA4335' }}>e</span>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        
+
         {/* Intro */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
           <div className="lg:col-span-12 text-center max-w-3xl mx-auto flex flex-col items-center gap-4">
@@ -41,7 +54,7 @@ export default function GoogleCompleto({ onCtaClick }: GoogleCompletoProps) {
 
         {/* Visual Simulated Google Search result + Metrics */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
-          
+
           {/* Left panel: Simulated Google Search results Card */}
           <div className="lg:col-span-6" id="google-search-mockup">
             <div className="bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden">
@@ -61,7 +74,7 @@ export default function GoogleCompleto({ onCtaClick }: GoogleCompletoProps) {
 
               {/* Main content */}
               <div className="p-4 sm:p-6 space-y-4 font-sans text-xs sm:text-sm">
-                
+
                 {/* Simulated Google Ad result 1: Optimized LOCCI client */}
                 <div className="p-4 rounded-xl border border-gold-200 bg-gold-50/30 space-y-2 relative">
                   <span className="absolute top-2 right-3 font-mono text-[9px] bg-gold-500 text-white font-bold px-1.5 py-0.5 rounded uppercase">Anúncio #1 Patrocinado</span>
@@ -102,9 +115,9 @@ export default function GoogleCompleto({ onCtaClick }: GoogleCompletoProps) {
             </div>
           </div>
 
-          {/* Right panel: Core strategic copy explanations and diagnostic path */}
+          {/* Right panel */}
           <div className="lg:col-span-6 flex flex-col justify-center gap-6" id="google-strategico-detalhes">
-            
+
             {/* Warning callout */}
             <div className="flex items-start gap-3 p-4 bg-red-500/5 rounded-xl border border-red-500/10 text-red-700">
               <AlertTriangle className="w-5 h-5 flex-shrink-0 mt-0.5" />
@@ -152,10 +165,10 @@ export default function GoogleCompleto({ onCtaClick }: GoogleCompletoProps) {
             </p>
             <button
               onClick={onCtaClick}
-              className="px-8 py-4 rounded-xl font-bold text-xs tracking-wider uppercase text-navy-950 bg-gradient-to-r from-gold-500 to-gold-200 hover:opacity-95 transition-all shadow-xl shadow-gold-500/20 flex items-center gap-2 cursor-pointer"
+              className="px-8 py-4 rounded-xl font-bold text-xs tracking-wider uppercase text-white bg-gradient-to-r from-gold-500 to-gold-600 hover:opacity-95 transition-all shadow-xl shadow-gold-500/20 flex items-center gap-2 cursor-pointer"
             >
               Quero meu diagnóstico gratuito
-              <TrendingUp className="w-4 h-4 text-navy-950" />
+              <TrendingUp className="w-4 h-4" />
             </button>
           </div>
         </div>
