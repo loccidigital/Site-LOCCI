@@ -4,11 +4,11 @@ import logoLocci from "../public/logo-locci.png";
 
 interface HeaderProps {
   currentTab: string;
-  setCurrentTab: (tab: string) => void;
+  onNavigate: (id: string) => void;
   openDiagnosticModal: () => void;
 }
 
-export default function Header({ currentTab, setCurrentTab, openDiagnosticModal }: HeaderProps) {
+export default function Header({ currentTab, onNavigate, openDiagnosticModal }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -20,7 +20,6 @@ export default function Header({ currentTab, setCurrentTab, openDiagnosticModal 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Trava o scroll do body quando menu mobile está aberto
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -44,16 +43,7 @@ export default function Header({ currentTab, setCurrentTab, openDiagnosticModal 
 
   const handleNavClick = (id: string) => {
     setIsOpen(false);
-    setCurrentTab(id);
-    // Pequeno delay para garantir que o menu feche antes de rolar
-    setTimeout(() => {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    }, 50);
+    onNavigate(id);
   };
 
   return (
@@ -141,7 +131,6 @@ export default function Header({ currentTab, setCurrentTab, openDiagnosticModal 
           className="lg:hidden fixed top-0 right-0 bottom-0 w-4/5 max-w-sm z-50 bg-navy-950 flex flex-col justify-between py-8 px-6 border-l border-white/5 shadow-2xl"
           id="mobile-menu-drawer"
         >
-          {/* Logo no topo do menu */}
           <div>
             <div className="flex items-center justify-between mb-8">
               <div className="flex items-center gap-2">
