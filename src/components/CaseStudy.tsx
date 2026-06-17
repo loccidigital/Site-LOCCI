@@ -1,4 +1,4 @@
-import { CheckCircle, Trophy, Star, ArrowRight, Activity, CalendarDays } from "lucide-react";
+import { CheckCircle, Trophy, Star, ArrowRight, Activity } from "lucide-react";
 
 export default function CaseStudy() {
   const steps = [
@@ -22,15 +22,14 @@ export default function CaseStudy() {
 
   return (
     <section id="case" className="relative py-24 bg-white overflow-hidden">
-      {/* Background elegant architectural line grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ab864405_1px,transparent_1px),linear-gradient(to_bottom,#ab864405_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        
+
         {/* Header case title */}
         <div className="max-w-3xl mx-auto text-center mb-16" id="case-header">
           <span className="text-xs font-mono font-bold text-gold-600 uppercase tracking-widest bg-gold-100/50 px-3.5 py-1.5 rounded-full border border-gold-200">
-            ★ Case de Sucesso em Destaque
+            Case de Sucesso
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black tracking-tight text-navy-950 mt-4 mb-4">
             Do absoluto zero a 40 clientes qualificados por mês
@@ -42,24 +41,24 @@ export default function CaseStudy() {
 
         {/* Core Case Study Content Board */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
-          
-          {/* Left panel: Simulated architectural showroom rendering and stats mockups */}
+
+          {/* Left panel */}
           <div className="lg:col-span-6 space-y-6" id="case-visual">
             <div className="relative rounded-2xl overflow-hidden bg-navy-950 p-8 border border-white/10 shadow-2xl text-white">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-full blur-2xl" />
-              
+
               <div className="flex justify-between items-start mb-6">
                 <div>
-                  <span className="text-[10px] text-gold-500 font-mono uppercase tracking-widest">Nicho Premium</span>
+                  <span className="text-[10px] text-gold-500 font-mono uppercase tracking-widest">Nicho Construção</span>
                   <h3 className="text-xl font-display font-bold text-white mt-1">Casa Travertino</h3>
-                  <p className="text-xs text-gray-400">Revestimentos e Acabamentos Importados</p>
+                  <p className="text-xs text-gray-400">Revestimentos e Acabamentos</p>
                 </div>
                 <span className="px-2.5 py-1 rounded bg-gold-500/10 border border-gold-500/30 text-[10px] text-gold-500 font-mono uppercase">
                   Estudo de Caso
                 </span>
               </div>
 
-              {/* Travertino stats board */}
+              {/* Stats board */}
               <div className="grid grid-cols-2 gap-4 mt-6">
                 <div className="bg-white/5 p-4 rounded-xl border border-white/5">
                   <span className="text-[10px] text-gray-400 font-mono uppercase block">Status Inicial</span>
@@ -73,40 +72,35 @@ export default function CaseStudy() {
                 </div>
               </div>
 
-              {/* Showroom mini simulated visual component */}
-              <div className="bg-gradient-to-tr from-gold-100 to-gold-50 p-[1.5px] rounded-xl border border-white/5 mt-6">
-                <div className="bg-navy-900 rounded-[11px] p-4 flex items-center justify-between text-xs">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded bg-gold-200 flex items-center justify-center font-bold text-navy-950">CT</div>
-                    <div>
-                      <span className="block font-bold">Showroom Principal</span>
-                      <span className="text-[9px] text-gray-400">Venda de produtos de Ticket Alto</span>
-                    </div>
+              {/* Faturamento highlight — substituiu o card do showroom */}
+              <div className="mt-6 rounded-xl border border-gold-500/40 bg-gold-500/10 p-4 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-gold-500/20 flex items-center justify-center">
+                    <Activity className="w-4 h-4 text-gold-400" />
                   </div>
-                  <span className="text-[10px] font-mono text-gold-500 font-bold">100% de Ativação</span>
+                  <div>
+                    <span className="block text-xs font-bold text-gold-400 uppercase tracking-wider">Impacto Financeiro</span>
+                    <span className="block text-sm font-display font-black text-white">Aumento Relevante de Faturamento</span>
+                  </div>
                 </div>
+                <Trophy className="w-5 h-5 text-gold-500" />
               </div>
             </div>
 
-            {/* Micro stats ticker */}
-            <div className="grid grid-cols-3 gap-4" id="case-stats-ticker">
-              <div className="bg-gold-50 p-4 rounded-xl border border-gold-200 text-center">
-                <span className="block text-2xl font-display font-extrabold text-navy-900">40</span>
-                <span className="text-[10px] text-gray-500 uppercase font-mono tracking-wider block mt-1">Leads /mês</span>
-              </div>
-              <div className="bg-gold-50 p-4 rounded-xl border border-gold-200 text-center">
-                <span className="block text-2xl font-display font-extrabold text-navy-900">0 a 100%</span>
+            {/* 2 stat cards */}
+            <div className="grid grid-cols-2 gap-4" id="case-stats-ticker">
+              <div className="bg-gold-50 p-5 rounded-xl border border-gold-200 text-center">
+                <span className="block text-2xl sm:text-3xl font-display font-extrabold text-navy-900">100%</span>
                 <span className="text-[10px] text-gray-500 uppercase font-mono tracking-wider block mt-1">Marca Estruturada</span>
               </div>
-              <div className="bg-gold-50 p-4 rounded-xl border border-gold-200 text-center">
-                <span className="block text-2xl font-display font-extrabold text-navy-900">10x</span>
+              <div className="bg-gold-50 p-5 rounded-xl border border-gold-200 text-center">
+                <span className="block text-2xl sm:text-3xl font-display font-extrabold text-navy-900">20x</span>
                 <span className="text-[10px] text-gray-500 uppercase font-mono tracking-wider block mt-1">Retorno de ROI</span>
               </div>
             </div>
-
           </div>
 
-          {/* Right panel: Strategic actions built by LOCCI */}
+          {/* Right panel: Strategic actions */}
           <div className="lg:col-span-6 flex flex-col justify-between" id="case-deliverables">
             <div className="space-y-6">
               <h3 className="text-2xl font-display font-black text-navy-950">
@@ -133,18 +127,14 @@ export default function CaseStudy() {
 
         </div>
 
-        {/* Depoimento em Destaque da Cátia */}
+        {/* Depoimento */}
         <div className="max-w-4xl mx-auto mt-16" id="case-testimonial">
           <div className="relative bg-gradient-to-r from-gold-50 to-gold-100 p-8 sm:p-12 rounded-3xl border border-gold-200 shadow-md">
-            
-            {/* Absolute visual comma ornaments */}
-            <span className="absolute top-4 left-6 text-7xl font-display text-gold-500/20 select-none pointer-events-none">“</span>
-            
+            <span className="absolute top-4 left-6 text-7xl font-display text-gold-500/20 select-none pointer-events-none">"</span>
             <div className="relative z-10 flex flex-col gap-6">
               <p className="text-navy-950 text-base sm:text-lg lg:text-xl font-medium italic leading-relaxed text-center">
                 "Muito obrigada por toda a ajuda gente, tá tudo um sonho. Vocês pegaram nosso sonho, uma ideia que a gente só tinha na cabeça e tornaram real."
               </p>
-              
               <div className="flex items-center justify-center gap-3">
                 <div className="w-11 h-11 rounded-full bg-navy-900 text-white flex items-center justify-center font-display font-bold text-sm">
                   C
