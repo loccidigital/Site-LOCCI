@@ -1,119 +1,241 @@
-import fotoFundadores from "../public/foto-fundadores.PNG";
+import { useState } from "react";
+import { Compass, CheckCircle2, AlertCircle, ArrowRight } from "lucide-react";
 
-export default function About() {
-  const milestones = [
+interface MetodoProps {
+  onCtaClick: () => void;
+}
+
+export default function Metodo({ onCtaClick }: MetodoProps) {
+  const [activeContrastTab, setActiveContrastTab] = useState<"with" | "without">("with");
+
+  const pillars = [
     {
-      year: "2024 (O Início)",
-      title: "Um computador, um celular e uma convicção",
-      desc: "A LOCCI nasce em 2024 motivada pelo cansaço do marketing 'de agência tradicional': relatórios complexos sem vendas na conta bancária. Decidimos que negócios locais merecem marketing sério, transparente e focado em faturamento real."
+      num: "01",
+      title: "Hiperpersonalização",
+      desc: "Com base nos valores e objetivos da sua empresa, desenvolvemos uma comunicação estratégica exclusiva para transformar a presença digital em uma extensão autêntica da sua marca.",
+      details: ["Estudo aprofundado do segmento", "Tom de voz específico da empresa", "Análise de público geolocalizado"]
     },
     {
-      year: "Método P² Desenvolvido",
-      title: "Consolidação de Processos Estratégicos",
-      desc: "Após imersão profunda em diversos segmentos locais, criamos o Método P² (Prático e Personalizado) para alinhar a comunicação e canais de intenção como o Google, gerando leads previsíveis."
+      num: "02",
+      title: "Praticidade",
+      desc: "Uma estrutura altamente organizada e transparente que centraliza toda a operação da marca em um só lugar para tornar a comunicação ágil, acessível e eficiente no dia a dia.",
+      details: ["Drive único e organizado", "Centralização de materiais brutos", "Processo rápido de aprovação"]
     },
     {
-      year: "Hoje & Futuro",
-      title: "Transformando o Cenário Digital",
-      desc: "Atendemos contas que chegam até nós antes de ter nome e as transformamos em líderes regionais. Colocamos o nosso nome literalmente em cada entrega."
+      num: "03",
+      title: "Estratégia",
+      desc: "Cada decisão é construída com intenção genuína, análise de concorrência e posicionamento inteligente para garantir que a comunicação da sua marca tenha direção, consistência e rentabilidade.",
+      details: ["Direcionamento de anúncios", "Funil comercial integrado", "Foco no lead qualificado"]
+    },
+    {
+      num: "04",
+      title: "Otimização",
+      desc: "Análise contínua de métricas, comportamento do consumidor local e dados de anúncios para refinar as estratégias, otimizar orçamentos e potencializar o crescimento da sua marca.",
+      details: ["Dashboard claro de resultados", "Reunião mensal de alinhamento", "Ajustes de lance em tempo real"]
     }
   ];
 
   return (
-    <section id="sobre" className="relative py-24 bg-[#F6F6F6] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="metodo" className="relative py-24 bg-gradient-to-b from-[#101930] to-navy-950 text-white overflow-hidden">
+      {/* Light highlights */}
+      <div className="absolute top-1/3 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
 
-        {/* Storytelling introduction */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
-          <div className="lg:col-span-7 flex flex-col gap-5">
-            <span className="text-xs font-mono font-bold uppercase tracking-widest text-gold-500">História e Propósito</span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-navy-950 tracking-tight leading-tight">
-              Por trás da LOCCI, tem história!
-            </h2>
-            <div className="h-1 w-20 bg-gold-500 rounded" />
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-            <p className="text-gray-700 text-lg leading-relaxed mt-2 font-medium">
-              "A LOCCI nasceu em 2024 com a missão de transformar a forma como negócios locais se posicionam no digital."
-            </p>
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              Criamos a agência motivados por um propósito claro: negócios locais não precisam de pacotes prontos de agências automatizadas. Eles merecem marketing de verdade, feito por quem se importa com o resultado financeiro delas.
-              Somos de carne e osso, dedicados, obstinados. E colocamos o nosso nome, literalmente, em cada projeto que entregamos.
-            </p>
+        {/* Title block */}
+        <div className="max-w-3xl mx-auto text-center mb-16" id="metodo-intro">
+          <span className="text-xs font-mono font-bold text-gold-500 uppercase tracking-widest bg-white/5 px-3 py-1.5 rounded-full border border-white/10">
+            Metodologia LOCCI
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black tracking-tight text-white mt-4 mb-6">
+            Método P² — Prático e Personalizado
+          </h2>
+          <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+            Nada de pacote genérico. Nada de estratégia copiada. O método P² é o jeito LOCCI de trabalhar:
+            a gente mergulha no seu negócio, entende sua história, seus valores e seus objetivos para que assim
+            a gente possa montar um plano de ação claro, direto e que você consegue acompanhar passo a passo.
+          </p>
+        </div>
+
+        {/* Interactive Contrast Section: Sem o Método vs Com o Método */}
+        <div className="bg-navy-900/60 p-6 sm:p-8 rounded-2xl border border-white/10 shadow-2xl mb-20">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8 border-b border-white/5 pb-6">
+            <div>
+              <h3 className="text-xl font-display font-bold text-white">Como você quer operar o marketing da sua empresa?</h3>
+              <p className="text-xs sm:text-sm text-gray-400">Clique nos estados abaixo para ver a diferença prática.</p>
+            </div>
+
+            {/* Toggler */}
+            <div className="flex bg-navy-950 p-1.5 rounded-xl border border-white/5 select-none font-mono text-xs">
+              <button
+                onClick={() => setActiveContrastTab("without")}
+                className={`px-4 py-2 rounded-lg cursor-pointer transition-all ${
+                  activeContrastTab === "without"
+                    ? "bg-red-500/20 text-red-400 border border-red-500/30"
+                    : "text-gray-400 hover:text-white"
+                }`}
+                id="tab-without-metodo"
+              >
+                Sem o Método P²
+              </button>
+              <button
+                onClick={() => setActiveContrastTab("with")}
+                className={`px-4 py-2 rounded-lg cursor-pointer transition-all ${
+                  activeContrastTab === "with"
+                    ? "bg-gold-500 text-navy-950 font-bold"
+                    : "text-gray-400 hover:text-white"
+                }`}
+                id="tab-with-metodo"
+              >
+                Com o Método P²
+              </button>
+            </div>
           </div>
 
-          {/* Founders Card com foto real */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative rounded-2xl overflow-hidden bg-navy-950/95 border border-white/5 py-10 px-8 shadow-2xl text-center group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-full blur-2xl pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl pointer-events-none" />
+          {/* Contrast Content Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
-              <div className="relative z-10">
-                {/* Foto dos fundadores */}
-                <div className="flex justify-center mb-6">
-                  <img
-                    src={fotoFundadores}
-                    alt="Emanuel e Camila - Fundadores da LOCCI"
-                    className="w-36 h-36 rounded-full object-cover border-2 border-gold-500/40 shadow-xl"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = 'none';
-                      const fallback = document.getElementById('founders-fallback');
-                      if (fallback) fallback.style.display = 'flex';
-                    }}
-                  />
-                  {/* Fallback com iniciais (escondido por padrão) */}
-                  <div id="founders-fallback" className="hidden justify-center -space-x-4">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-gold-600 to-gold-200 p-[1px] shadow-lg">
-                      <div className="w-full h-full bg-navy-950 rounded-full flex items-center justify-center font-display font-black text-white text-base">E</div>
-                    </div>
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-gold-600 to-gold-200 p-[1px] shadow-lg">
-                      <div className="w-full h-full bg-navy-950 rounded-full flex items-center justify-center font-display font-black text-white text-base">C</div>
+            {/* Visual simulation representation */}
+            <div className="bg-navy-950 p-6 rounded-xl border border-white/5 h-[280px] flex flex-col justify-between relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-white/2 rounded-full pointer-events-none" />
+
+              {activeContrastTab === "without" ? (
+                <>
+                  <div className="flex items-center gap-2 text-red-500">
+                    <AlertCircle className="w-5 h-5" />
+                    <span className="font-mono text-xs font-bold uppercase tracking-widest">Totalmente Perdido</span>
+                  </div>
+                  <div className="flex-1 flex items-center justify-center py-4">
+                    <div className="w-full max-w-[280px] stroke-red-500/60 flex flex-col items-center gap-2 text-center">
+                      <div className="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 text-lg animate-pulse">❓</div>
+                      <p className="text-xs text-gray-400 max-w-[220px]">Anúncios jogados no lixo, posts diários sem engajamento, dependência do acaso e zero previsibilidade comercial.</p>
                     </div>
                   </div>
-                </div>
-
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] text-gold-500 uppercase tracking-widest font-mono mb-4">
-                  Fundadores
-                </div>
-
-                <h3 className="text-xl font-display font-bold text-white">Emanuel e Camila</h3>
-                <p className="text-xs text-mono text-gray-400 mt-1 uppercase">LOCCI</p>
-
-                <p className="text-gray-300 text-xs mt-4 leading-relaxed max-w-sm mx-auto">
-                  "Cuidamos de cada funil estratégico pessoalmente. Na LOCCI, seu projeto não é tratado por estagiários genéricos; nós mesmos validamos e acompanhamos toda a operação."
-                </p>
-
-                <div className="flex justify-center gap-6 mt-6 pt-6 border-t border-white/5">
-                  <div>
-                    <span className="block text-white font-bold text-sm">Emanuel</span>
-                    <span className="text-[10px] text-gray-500 font-mono uppercase">Tráfego & Análise</span>
+                  <span className="text-[10px] text-gray-600 font-mono text-center block uppercase tracking-widest">Insegurança & Dinheiro no Ralo</span>
+                </>
+              ) : (
+                <>
+                  <div className="flex items-center gap-2 text-gold-500">
+                    <CheckCircle2 className="w-5 h-5 text-gold-500" />
+                    <span className="font-mono text-xs font-bold uppercase tracking-widest">Solução Clara & Sucessiva</span>
                   </div>
-                  <div className="w-px h-8 bg-white/10" />
-                  <div>
-                    <span className="block text-white font-bold text-sm">Camila</span>
-                    <span className="text-[10px] text-gray-500 font-mono uppercase">Estratégia & Posicionamento</span>
+                  <div className="flex-1 flex items-center justify-center py-4">
+                    <div className="relative w-full max-w-[340px] flex items-center justify-between">
+                      <div className="text-center">
+                        <div className="w-8 h-8 rounded-full bg-gold-500/20 text-gold-500 flex items-center justify-center text-xs font-bold mx-auto">1</div>
+                        <span className="text-[9px] text-gray-400 block mt-1">Diagnóstico</span>
+                      </div>
+                      <div className="flex-1 border-t-2 border-dashed border-gold-500/30 mx-2" />
+                      <div className="text-center">
+                        <div className="w-8 h-8 rounded-full bg-gold-500/20 text-gold-500 flex items-center justify-center text-xs font-bold mx-auto">2</div>
+                        <span className="text-[9px] text-gray-400 block mt-1">Ativação</span>
+                      </div>
+                      <div className="flex-1 border-t-2 border-dashed border-gold-500/30 mx-2" />
+                      <div className="text-center">
+                        <div className="w-8 h-8 rounded-full bg-gold-500 text-navy-950 flex items-center justify-center text-xs font-bold mx-auto">3</div>
+                        <span className="text-[9px] text-gold-500 block font-bold mt-1">Venda Direta</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
+                  <span className="text-[10px] text-gold-500 font-mono text-center block uppercase tracking-widest">Processo previsível de captação comercial</span>
+                </>
+              )}
             </div>
+
+            {/* Explanatory text grid */}
+            <div className="flex flex-col justify-center gap-4">
+              <h4 className="text-lg font-display font-semibold text-white">
+                {activeContrastTab === "without"
+                  ? "As dores do marketing genérico tradicional"
+                  : "Por que o Método P² funciona de verdade"
+                }
+              </h4>
+              <ul className="space-y-3" id="contrast-checklist">
+                {activeContrastTab === "without" ? (
+                  <>
+                    <li className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-400">
+                      <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-2" />
+                      <span>Copiar cegamente posts sem uma identidade ou propósito comercial.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-400">
+                      <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-2" />
+                      <span>Anúncios configurados incorretamente que queimam dinheiro em cliques de curiosos.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-400">
+                      <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-2" />
+                      <span>Falta de clareza: você não sabe de onde vêm seus leads ou por que as vendas esfriaram.</span>
+                    </li>
+                  </>
+                ) : (
+                  <>
+                    <li className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-300">
+                      <div className="w-1.5 h-1.5 bg-gold-500 rounded-full mt-2" />
+                      <span><strong>Totalmente Rastreado:</strong> Você sabe de onde vem o lead, o custo exato e o retorno.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-300">
+                      <div className="w-1.5 h-1.5 bg-gold-500 rounded-full mt-2" />
+                      <span><strong>Audiovisual Cinema:</strong> Captação presencial que transmite autoridade inquestionável imediata.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-300">
+                      <div className="w-1.5 h-1.5 bg-gold-500 rounded-full mt-2" />
+                      <span><strong>Posicionamento Local:</strong> Domínio absoluto do Google e do Instagram na sua área comercial.</span>
+                    </li>
+                  </>
+                )}
+              </ul>
+            </div>
+
           </div>
         </div>
 
-        {/* Timeline representation */}
-        <div className="mb-8 mt-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            <div className="hidden md:block absolute top-[28px] left-[50px] right-[50px] h-[2px] bg-gold-200 z-0" />
+        {/* Pilares do Método P² Grid */}
+        <h3 className="text-2xl sm:text-3xl font-display font-black text-center text-white mb-2">
+          Pilares Operacionais do Método P²
+        </h3>
+        <p className="text-gray-400 text-sm text-center max-w-lg mx-auto mb-12">
+          Garantimos estrutura, velocidade e direção estratégica integrada para sua empresa faturar mais.
+        </p>
 
-            {milestones.map((milestone, idx) => (
-              <div key={idx} className="relative z-10 flex flex-col items-center md:items-start text-center md:text-left bg-white p-6 rounded-xl border border-gold-200/50 shadow-sm">
-                <div className="w-12 h-12 rounded-full bg-navy-950 flex items-center justify-center border-4 border-gold-100 font-display font-bold text-white text-xs mb-4">
-                  {idx + 1}
-                </div>
-                <span className="text-xs font-mono font-bold text-gold-500 uppercase tracking-wider">{milestone.year}</span>
-                <h4 className="text-base font-display font-bold text-navy-950 mt-1.5 mb-2">{milestone.title}</h4>
-                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{milestone.desc}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="pilares-cards">
+          {pillars.map((pilar, index) => (
+            <div
+              key={index}
+              className="bg-navy-900 border border-white/5 rounded-2xl p-6 hover:border-gold-500/40 hover:bg-navy-900/80 transition-all duration-300 flex flex-col justify-between group cursor-default"
+              id={`pilar-${pilar.num}`}
+            >
+              <div>
+                <span className="font-mono text-xs font-bold text-gold-500 tracking-widest block mb-4 group-hover:scale-105 transition-transform">
+                  ★ PILAR {pilar.num}
+                </span>
+                <h4 className="text-lg font-display font-bold text-white mb-3 group-hover:text-gold-200 transition-colors">
+                  {pilar.title}
+                </h4>
+                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">
+                  {pilar.desc}
+                </p>
               </div>
-            ))}
-          </div>
+              <div className="border-t border-white/5 pt-4 space-y-2">
+                {pilar.details.map((detail, dIdx) => (
+                  <span key={dIdx} className="block text-[11px] text-gray-500 font-mono">
+                    • {detail}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Action Bottom */}
+        <div className="text-center mt-12">
+          <button
+            onClick={onCtaClick}
+            className="group px-6 py-3.5 rounded-xl font-bold text-xs tracking-wider uppercase text-navy-950 bg-gold-500 hover:bg-gold-600 transition-all inline-flex items-center gap-2 cursor-pointer"
+            id="metodo-cta-bottom"
+          >
+            Quero aplicar a metodologia na minha empresa
+            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+          </button>
         </div>
 
       </div>
