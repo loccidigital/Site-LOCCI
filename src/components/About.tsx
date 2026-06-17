@@ -1,40 +1,6 @@
-import { Target, UserCheck, Heart, Users, Compass, HelpCircle } from "lucide-react";
 import fotoFundadores from "../public/foto-fundadores.PNG";
 
 export default function About() {
-  const locciMeaning = [
-    {
-      letter: "L",
-      word: "Lealdade",
-      desc: "Relacionamentos sólidos e transparentes em primeiro lugar. Fazemos do seu sucesso o nosso compromisso.",
-      icon: "🤝"
-    },
-    {
-      letter: "O",
-      word: "Otimização",
-      desc: "Nossa obsessão é analisar resultados constantemente e ajustar rotas para extrair o máximo de performance.",
-      icon: "⚙️"
-    },
-    {
-      letter: "C",
-      word: "Comunicação",
-      desc: "Conversas claras, relatórios honestos e zero enrolação técnica. Você sabe exatamente onde cada centavo está sendo investido.",
-      icon: "📣"
-    },
-    {
-      letter: "C",
-      word: "Conexão",
-      desc: "Construímos pontes emocionais reais entre seus produtos e os clientes locais prontos para fechar contrato.",
-      icon: "✨"
-    },
-    {
-      letter: "I",
-      word: "Inovação",
-      desc: "Métodos modernos de captação, anúncios estratégicos no Google e ferramentas inteligentes para sair na frente.",
-      icon: "⚡"
-    }
-  ];
-
   const milestones = [
     {
       year: "2024 (O Início)",
@@ -119,12 +85,12 @@ export default function About() {
                 <div className="flex justify-center gap-6 mt-6 pt-6 border-t border-white/5">
                   <div>
                     <span className="block text-white font-bold text-sm">Emanuel</span>
-                    <span className="text-[10px] text-gray-500 font-mono uppercase">Estratégia & Tráfego</span>
+                    <span className="text-[10px] text-gray-500 font-mono uppercase">Tráfego & Análise</span>
                   </div>
                   <div className="w-px h-8 bg-white/10" />
                   <div>
                     <span className="block text-white font-bold text-sm">Camila</span>
-                    <span className="text-[10px] text-gray-500 font-mono uppercase">Audiovisual & Posicionamento</span>
+                    <span className="text-[10px] text-gray-500 font-mono uppercase">Estratégia & Posicionamento</span>
                   </div>
                 </div>
               </div>
@@ -133,7 +99,7 @@ export default function About() {
         </div>
 
         {/* Timeline representation */}
-        <div className="mb-24 mt-12">
+        <div className="mb-8 mt-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
             <div className="hidden md:block absolute top-[28px] left-[50px] right-[50px] h-[2px] bg-gold-200 z-0" />
 
@@ -145,45 +111,6 @@ export default function About() {
                 <span className="text-xs font-mono font-bold text-gold-500 uppercase tracking-wider">{milestone.year}</span>
                 <h4 className="text-base font-display font-bold text-navy-950 mt-1.5 mb-2">{milestone.title}</h4>
                 <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{milestone.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Breakdown of LOCCI letters (MEANING) */}
-        <div>
-          <div className="text-center mb-12">
-            <span className="text-xs font-mono font-bold uppercase text-gold-500 tracking-wider">O Significado da Marca</span>
-            <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-navy-950 mt-2">
-              Os Pilares de Caráter da LOCCI
-            </h3>
-            <p className="text-gray-500 text-sm max-w-xl mx-auto mt-2">
-              Muito além de um nome, carregamos compromissos claros desenhados em nossa assinatura institucional.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-            {locciMeaning.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-2xl border border-gold-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative group"
-                id={`locci-meaning-${item.letter.toLowerCase()}-${index}`}
-              >
-                <div className="absolute top-4 right-4 text-2xl opacity-60 group-hover:opacity-100 transition-opacity">
-                  {item.icon}
-                </div>
-
-                <div className="text-4xl font-display font-black text-gold-500 -mt-1">
-                  {item.letter}
-                </div>
-
-                <h4 className="text-lg font-display font-bold text-navy-950 mt-1 mb-2">
-                  {item.word}
-                </h4>
-
-                <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
-                  {item.desc}
-                </p>
               </div>
             ))}
           </div>
