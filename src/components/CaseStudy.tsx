@@ -67,7 +67,7 @@ export default function CaseStudy() {
                 </div>
                 <div className="bg-white/5 p-4 rounded-xl border border-gold-500/10">
                   <span className="text-[10px] text-gold-500 font-mono uppercase block">Resultado Atual</span>
-                  <span className="text-base font-bold text-green-400 block mt-1">+40 Leads Reais/mês</span>
+                  <span className="text-base font-bold text-green-400 block mt-1">+40 Leads/mês</span>
                   <span className="text-[9px] text-gray-500">Faturamento local previsível</span>
                 </div>
               </div>
