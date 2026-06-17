@@ -77,6 +77,57 @@ export default function About() {
           </div>
         </div>
 
+        {/* Timeline: Jornada da LOCCI */}
+        <div className="mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+            {/* Connecting line desktop */}
+            <div className="hidden md:block absolute top-8 left-[16.66%] right-[16.66%] h-[2px] bg-gradient-to-r from-gold-500/30 via-gold-500/60 to-gold-500/30 pointer-events-none" />
+
+            {/* Card 1 */}
+            <div className="relative bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-10 h-10 rounded-full bg-navy-950 text-gold-500 flex items-center justify-center font-display font-black text-base mb-5 relative z-10">
+                1
+              </div>
+              <span className="text-[10px] font-mono text-gold-600 uppercase tracking-widest font-bold">2024 (O Início)</span>
+              <h4 className="text-base font-display font-bold text-navy-950 mt-1 mb-3">
+                Um computador, um celular e uma convicção
+              </h4>
+              <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
+                A LOCCI nasce em 2024 motivada pelo cansaço do marketing "de agência tradicional": relatórios complexos sem vendas na conta bancária. Decidimos que negócios locais merecem mais.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="relative bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-10 h-10 rounded-full bg-navy-950 text-gold-500 flex items-center justify-center font-display font-black text-base mb-5 relative z-10">
+                2
+              </div>
+              <span className="text-[10px] font-mono text-gold-600 uppercase tracking-widest font-bold">Método P² Desenvolvido</span>
+              <h4 className="text-base font-display font-bold text-navy-950 mt-1 mb-3">
+                Consolidação de Processos Estratégicos
+              </h4>
+              <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
+                Após imersão profunda em diversos segmentos locais, criamos o Método P² (Prático e Personalizado) para alinhar a comunicação e canais de intenção como o Google, gerando leads qualificados de forma previsível.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="relative bg-white border border-gold-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-10 h-10 rounded-full bg-gold-500 text-navy-950 flex items-center justify-center font-display font-black text-base mb-5 relative z-10">
+                3
+              </div>
+              <span className="text-[10px] font-mono text-gold-600 uppercase tracking-widest font-bold">Hoje &amp; Futuro</span>
+              <h4 className="text-base font-display font-bold text-navy-950 mt-1 mb-3">
+                Transformando o Cenário Digital
+              </h4>
+              <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
+                Atendemos contas que chegam até nós antes de ter nome e as transformamos em líderes regionais. Colocamos o nosso nome literalmente em cada entrega.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
   );
