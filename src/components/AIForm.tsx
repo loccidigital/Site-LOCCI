@@ -1,10 +1,11 @@
-import { useState, FormEvent } from "react";
+import { useState, useRef, FormEvent } from "react";
 import { ArrowRight, ShieldCheck, Loader2, CheckCircle2 } from "lucide-react";
 
 export default function AIForm() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [leadName, setLeadName] = useState("");
+  const sectionRef = useRef<HTMLElement>(null);
   const [formData, setFormData] = useState({
     nome: "",
     whatsapp: "",
@@ -94,6 +95,9 @@ export default function AIForm() {
       });
       setLeadName(formData.nome.split(" ")[0]);
       setSubmitted(true);
+      setTimeout(() => {
+        sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
     } catch (err) {
       console.error("Erro ao enviar lead:", err);
     } finally {
@@ -103,6 +107,7 @@ export default function AIForm() {
 
   return (
     <section
+      ref={sectionRef}
       id="diagnostico-final"
       className="relative py-24 bg-gradient-to-b from-[#0e1628] to-navy-950 text-white overflow-hidden border-t border-white/5"
     >
