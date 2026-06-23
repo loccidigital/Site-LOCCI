@@ -13,21 +13,36 @@ import Footer from "./components/Footer";
 
 type PageType = "main" | "google-completo" | "captacao-eventos";
 
+function pathToPage(pathname: string): PageType {
+  if (pathname === "/google-completo") return "google-completo";
+  if (pathname === "/captacao-eventos") return "captacao-eventos";
+  return "main";
+}
+
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<PageType>("main");
+  const [currentPage, setCurrentPage] = useState<PageType>(() =>
+    pathToPage(window.location.pathname)
+  );
   const [currentTab, setCurrentTab] = useState("home");
   const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // Sincroniza estado com botão voltar/avançar do browser
+  useEffect(() => {
+    const handlePopState = () => {
+      const page = pathToPage(window.location.pathname);
+      setCurrentPage(page);
+      window.scrollTo({ top: 0 });
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 500);
-
-      // Active tab tracking: only on main page
       if (currentPage !== "main") return;
-
       const sections = ["home", "sobre", "metodo", "case", "servicos"];
       const scrollPosition = window.scrollY + 200;
-
       for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
@@ -40,29 +55,28 @@ export default function App() {
         }
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [currentPage]);
 
-  // Navigate: handles both scroll-based (main page) and page-based navigation
   const navigateTo = (id: string) => {
     if (id === "google-completo") {
+      history.pushState({}, "", "/google-completo");
       setCurrentPage("google-completo");
       setCurrentTab("google-completo");
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
-
     if (id === "eventos") {
+      history.pushState({}, "", "/captacao-eventos");
       setCurrentPage("captacao-eventos");
       setCurrentTab("eventos");
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
-
-    // All other sections: go to main page and scroll
+    // Seções da página principal
     if (currentPage !== "main") {
+      history.pushState({}, "", "/");
       setCurrentPage("main");
       setCurrentTab(id);
       setTimeout(() => {
@@ -86,6 +100,7 @@ export default function App() {
 
   const scrollToDiagnostic = () => {
     if (currentPage !== "main") {
+      history.pushState({}, "", "/");
       setCurrentPage("main");
       setTimeout(() => {
         const el = document.getElementById("diagnostico-final");
@@ -102,6 +117,7 @@ export default function App() {
   };
 
   const goBackToMain = () => {
+    history.pushState({}, "", "/");
     setCurrentPage("main");
     setCurrentTab("servicos");
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -109,15 +125,12 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-navy-950 text-gray-100 flex flex-col font-sans select-none antialiased relative">
-
       <Header
         currentTab={currentTab}
         onNavigate={navigateTo}
         openDiagnosticModal={scrollToDiagnostic}
       />
-
       <main className="flex-grow flex flex-col">
-
         {/* MAIN PAGE */}
         {currentPage === "main" && (
           <>
@@ -130,7 +143,7 @@ export default function App() {
           </>
         )}
 
-        {/* GOOGLE COMPLETO — página separada */}
+        {/* GOOGLE COMPLETO */}
         {currentPage === "google-completo" && (
           <div className="pt-24 flex flex-col flex-grow">
             <div className="max-w-7xl mx-auto px-6 pt-6 pb-2 w-full">
@@ -147,7 +160,7 @@ export default function App() {
           </div>
         )}
 
-        {/* CAPTAÇÃO DE EVENTOS — página separada */}
+        {/* CAPTAÇÃO DE EVENTOS */}
         {currentPage === "captacao-eventos" && (
           <div className="pt-24 flex flex-col flex-grow">
             <div className="max-w-7xl mx-auto px-6 pt-6 pb-2 w-full">
@@ -163,14 +176,12 @@ export default function App() {
             <AIForm />
           </div>
         )}
-
       </main>
 
       <Footer onNavClick={navigateTo} />
 
       {/* Floating widgets */}
       <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3 items-end" id="floating-interaction-dock">
-
         {showScrollTop && (
           <button
             onClick={handleScrollToTop}
@@ -181,7 +192,6 @@ export default function App() {
             <ArrowUp className="w-5 h-5" />
           </button>
         )}
-
         <a
           href="https://wa.me/5561994219292?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20as%20estrat%C3%A9gias%20da%20LOCCI."
           target="_blank"
@@ -194,9 +204,7 @@ export default function App() {
           </span>
           <MessageSquare className="w-5 h-5 text-navy-950 fill-navy-950" />
         </a>
-
       </div>
-
     </div>
   );
 }
