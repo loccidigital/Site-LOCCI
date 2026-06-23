@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle, Flame, Star, Sparkles, ShieldCheck } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Sparkles, ShieldCheck } from "lucide-react";
 
 interface HeroProps {
   onCtaClick: () => void;
@@ -22,13 +22,12 @@ export default function Hero({ onCtaClick }: HeroProps) {
 
           {/* Badge */}
           <div className="inline-flex items-center gap-2 self-start px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold tracking-wider text-gold-500 uppercase animate-fade-in-up" id="hero-badge">
-            <Flame className="w-3.5 h-3.5 text-gold-500 fill-gold-500" />
             Método P² — Estratégia sem Achismo
           </div>
 
           {/* Headline */}
           <h1
-            className="text-4xl sm:text-5xl xl:text-6xl font-display font-black tracking-tight text-white leading-[1.1] animate-fade-in-up"
+            className="text-4xl sm:text-5xl xl:text-6xl font-display font-black tracking-tight text-white leading-[1.1] [text-wrap:pretty] animate-fade-in-up"
             id="hero-title"
           >
             Seu negócio merece um{" "}
@@ -41,7 +40,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
 
           {/* Subtitle */}
           <p
-            className="text-gray-300 text-base sm:text-lg max-w-xl leading-relaxed"
+            className="text-gray-300 text-base sm:text-lg max-w-xl leading-relaxed [text-wrap:pretty]"
             id="hero-subtitle"
           >
             Nós transformamos a presença digital de empresas com método e clareza.
@@ -165,8 +164,8 @@ export default function Hero({ onCtaClick }: HeroProps) {
             </div>
           </div>
 
-          {/* Floating Small Card overlay */}
-          <div className="absolute -bottom-6 -left-6 bg-navy-950 p-4 rounded-xl border border-white/10 shadow-xl max-w-[200px] flex items-center gap-3">
+          {/* Floating Small Card overlay — oculto no mobile */}
+          <div className="hidden sm:flex absolute -bottom-6 -left-6 bg-navy-950 p-4 rounded-xl border border-white/10 shadow-xl max-w-[200px] items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-gold-500/20 flex items-center justify-center text-gold-500">
               <ShieldCheck className="w-5 h-5" />
             </div>
@@ -176,8 +175,8 @@ export default function Hero({ onCtaClick }: HeroProps) {
             </div>
           </div>
 
-          {/* Floating Small Card 2 overlay */}
-          <div className="absolute -top-6 -right-4 bg-navy-950/90 py-2 px-3.5 rounded-full border border-white/10 shadow-lg flex items-center gap-2">
+          {/* Floating Small Card 2 overlay — oculto no mobile */}
+          <div className="hidden sm:flex absolute -top-6 -right-4 bg-navy-950/90 py-2 px-3.5 rounded-full border border-white/10 shadow-lg items-center gap-2">
             <Sparkles className="w-3.5 h-3.5 text-gold-500" />
             <span className="text-[10px] font-mono font-semibold text-white tracking-widest uppercase">Resultados Reais</span>
           </div>
