@@ -1,4 +1,5 @@
-import { Sparkles, MessageSquare, Mail, Instagram, ArrowUpRight, ShieldCheck, MapPin } from "lucide-react";
+import { MessageSquare, Mail, Instagram, ShieldCheck, MapPin } from "lucide-react";
+import locciLogoRodape from "../public/locci-logo-rodape.png";
 
 interface FooterProps {
   onNavClick: (id: string) => void;
@@ -36,7 +37,7 @@ export default function Footer({ onNavClick }: FooterProps) {
         <div className="md:col-span-5 space-y-5" id="footer-brand-section">
           <div className="cursor-pointer" onClick={() => handleNav("home")}>
             <img
-              src="/locci-logo-rodape.png"
+              src={locciLogoRodape}
               alt="LOCCI Digital"
               className="h-10 w-auto"
             />
