@@ -129,11 +129,7 @@ export default function GoogleCompleto({ onCtaClick }: GoogleCompletoProps) {
               </div>
             </div>
 
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed [text-wrap:pretty]">
-              Com o serviço de <strong>Google Completo</strong> da LOCCI, nós cobrimos todo o ecossistema de maior intenção de compra. Você não depende apenas de um post orgânico no Instagram que some em 24h. Você capta o lead no exato segundo em que ele precisa do seu produto.
-            </p>
-
-            <div className="space-y-4 mt-2">
+            <div className="space-y-4">
               {processSteps.map((step, idx) => (
                 <div key={idx} className="flex gap-4">
                   <div className="w-6 h-6 rounded-full bg-gold-500/20 text-gold-500 flex items-center justify-center text-xs font-bold mt-1 flex-shrink-0">
