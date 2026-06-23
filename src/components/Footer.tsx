@@ -1,5 +1,4 @@
-import { MessageSquare, Mail, Instagram, ShieldCheck, MapPin } from "lucide-react";
-import logoLocci from "../public/logo-locci.png";
+import { Sparkles, MessageSquare, Mail, Instagram, ArrowUpRight, ShieldCheck, MapPin } from "lucide-react";
 
 interface FooterProps {
   onNavClick: (id: string) => void;
@@ -35,19 +34,19 @@ export default function Footer({ onNavClick }: FooterProps) {
 
         {/* Left column: brand details */}
         <div className="md:col-span-5 space-y-5" id="footer-brand-section">
-          <div className="flex items-center gap-3 cursor-pointer group" onClick={() => handleNav("home")}>
-            <img
-              src={logoLocci}
-              alt="LOCCI"
-              className="h-9 w-auto group-hover:scale-105 transition-transform"
-            />
+          <div className="flex items-center gap-2 cursor-pointer group" onClick={() => handleNav("home")}>
+            <div className="relative w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-tr from-gold-600 to-gold-200 p-[1px]">
+              <div className="w-full h-full bg-navy-950 rounded-[7px] flex items-center justify-center">
+                <span className="text-gold-500 font-display font-black text-base tracking-widest">L</span>
+              </div>
+            </div>
             <span className="text-white font-display font-bold text-lg tracking-wider uppercase">
-              LOCCI
+              LOCCI <span className="text-gold-500 font-light">Digital</span>
             </span>
           </div>
 
-          <p className="text-sm max-w-sm leading-relaxed text-gray-400">
-            A LOCCI é uma agência boutique de inteligência de marketing premium e alta conversão regional. Construímos autoridade, criamos mídias cinematográficas e dominamos mecanismos de busca locais.
+          <p className="text-sm max-w-sm leading-relaxed text-gray-400 [text-wrap:pretty]">
+            A LOCCI Digital é uma agência boutique de inteligência de marketing premium e alta conversão regional. Construímos autoridade, criamos mídias cinematográficas e dominamos mecanismos de busca locais.
           </p>
 
           {/* Social icons */}
@@ -90,7 +89,7 @@ export default function Footer({ onNavClick }: FooterProps) {
           </div>
         </div>
 
-        {/* Right column: contact */}
+        {/* Right column: directly contact connections */}
         <div className="md:col-span-3 space-y-6" id="footer-contact-section">
           <h4 className="text-white font-display font-bold text-sm uppercase tracking-widest">Contato Direto</h4>
 
@@ -132,14 +131,14 @@ export default function Footer({ onNavClick }: FooterProps) {
 
       </div>
 
-      {/* Bottom copyright */}
+      {/* Bottom copyright details */}
       <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4" id="footer-copyright-row">
         <div className="flex items-center gap-1.5">
           <ShieldCheck className="w-4 h-4 text-gold-500" />
-          <span>© {currentYear} LOCCI. Todos os direitos reservados. CNPJ 61.613.724/0001-03</span>
+          <span>© {currentYear} LOCCI Digital. Todos os direitos reservados. CNPJ 61.613.724/0001-03</span>
         </div>
         <p className="font-mono tracking-widest text-[9px] uppercase">
-          ✦ COMPROMISSO • LEALDADE • INOVAÇÃO
+          COMPROMISSO • LEALDADE • INOVAÇÃO
         </p>
       </div>
     </footer>
