@@ -1,4 +1,4 @@
-import { Play, Camera, Film, Send, CheckCircle2, Tv, Grid, Download } from "lucide-react";
+import { Play, Camera, Film, Send, CheckCircle2, Download } from "lucide-react";
 
 interface CaptacaoEventosProps {
   onCtaClick: () => void;
@@ -39,35 +39,35 @@ export default function CaptacaoEventos({ onCtaClick }: CaptacaoEventosProps) {
       <div className="absolute inset-0 bg-[radial-gradient(#ffffff02_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        
+
         {/* Upper Title block */}
         <div className="max-w-3xl mx-auto text-center mb-16" id="event-header">
           <span className="text-xs font-mono font-bold text-gold-500 uppercase tracking-widest bg-white/5 py-1.5 px-3.5 rounded-full border border-white/10 inline-flex items-center gap-1.5">
             <Film className="w-3.5 h-3.5 text-gold-500" /> Cobertura Audiovisual Premium
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black tracking-tight text-white mt-4 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black tracking-tight text-white mt-4 mb-4 [text-wrap:pretty]">
             A LOCCI vai ao seu evento e entrega tudo pronto pra você usar
           </h2>
-          <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+          <p className="text-gray-300 text-sm sm:text-base leading-relaxed [text-wrap:pretty]">
             Nós captamos tudo com qualidade profissional, ângulos intencionais e entregamos o material finalizado nas suas mãos. Você vive o momento; a LOCCI cuida da sua autoridade nas telas.
           </p>
         </div>
 
         {/* Cinematic Device / Reels Overlay Stack preview */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
-          
+
           {/* Left panel: Bullet storytelling */}
           <div className="lg:col-span-5 space-y-6" id="event-narrative">
-            <h3 className="text-2xl font-display font-extrabold text-white">
+            <h3 className="text-2xl font-display font-extrabold text-white [text-wrap:pretty]">
               Seu evento foi incrível, mas você não tem nenhum bom registro real para divulgar?
             </h3>
-            <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+            <p className="text-gray-400 text-sm sm:text-base leading-relaxed [text-wrap:pretty]">
               Celular tremendo, áudio falho e luz estourada não transmitem o verdadeiro padrão de valor do seu serviço. No final, o material amador não faz jus ao impacto real que o seu evento presencial causou.
             </p>
-            <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+            <p className="text-gray-400 text-sm sm:text-base leading-relaxed [text-wrap:pretty]">
               Nossa equipe carrega equipamentos de primeira linha para estruturar um storytelling audiovisual forte. Capturamos depoimentos de convidados em tempo real, mostramos a energia do espaço físico e transformamos esse momento em uma poderosa máquina de marketing para fechar novos negócios futuros.
             </p>
-            
+
             <div className="pt-4">
               <button
                 onClick={onCtaClick}
@@ -82,10 +82,10 @@ export default function CaptacaoEventos({ onCtaClick }: CaptacaoEventosProps) {
           {/* Right panel: Phone simulator modeling stories capture */}
           <div className="lg:col-span-7 flex justify-center" id="stories-mockup-container">
             <div className="relative w-full max-w-[400px]">
-              
+
               {/* Main Simulated Phone Frame */}
               <div className="relative rounded-[36px] bg-navy-900 border-4 border-white/10 p-2.5 shadow-2xl overflow-hidden aspect-[9/16] max-h-[500px] mx-auto flex flex-col justify-between">
-                
+
                 {/* Selfie Cam / Speaker Detail */}
                 <span className="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-full z-20 flex items-center justify-center">
                   <span className="w-2.5 h-2.5 rounded-full bg-blue-900/40" />
@@ -93,10 +93,10 @@ export default function CaptacaoEventos({ onCtaClick }: CaptacaoEventosProps) {
 
                 {/* Main Visual background representing active recording visual */}
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-navy-950/40 z-0" />
-                
+
                 {/* Simulated Content inside screen */}
                 <div className="relative z-10 p-4 pt-10 flex flex-col justify-between h-full text-white">
-                  
+
                   {/* Top user profile header */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 bg-black/40 p-1.5 rounded-full border border-white/5 backdrop-blur-sm">
@@ -119,7 +119,7 @@ export default function CaptacaoEventos({ onCtaClick }: CaptacaoEventosProps) {
                   {/* Text details bottom of screen */}
                   <div className="space-y-2 bg-black/50 p-3 rounded-xl border border-white/5 backdrop-blur-sm">
                     <span className="text-[8px] font-mono text-gold-500 font-bold uppercase tracking-wider">Momento Captado</span>
-                    <h4 className="text-xs font-bold leading-tight">Posicionamento e Entrega Cinematográfica do seu Showroom</h4>
+                    <h4 className="text-xs font-bold leading-tight [text-wrap:pretty]">Posicionamento e Entrega Cinematográfica do seu Showroom</h4>
                     <p className="text-[9px] text-gray-300">Geração de desejo e autoridade em segundos de tela.</p>
                   </div>
 
@@ -133,10 +133,10 @@ export default function CaptacaoEventos({ onCtaClick }: CaptacaoEventosProps) {
         </div>
 
         {/* Deliverables cards listing */}
-        <h3 className="text-2xl sm:text-3xl font-display font-black text-center text-white mb-2 font-display">
+        <h3 className="text-2xl sm:text-3xl font-display font-black text-center text-white mb-2 [text-wrap:pretty]">
           Nossos Formatos de Entrega
         </h3>
-        <p className="text-gray-400 text-sm text-center max-w-lg mx-auto mb-12">
+        <p className="text-gray-400 text-sm text-center max-w-lg mx-auto mb-12 [text-wrap:pretty]">
           Garantimos profissionalismo absoluto, velocidade de renderização e organização digital impecável do material.
         </p>
 
@@ -154,10 +154,10 @@ export default function CaptacaoEventos({ onCtaClick }: CaptacaoEventosProps) {
                     {Icon && <Icon className="w-5 h-5" />}
                   </div>
 
-                  <h4 className="font-display font-bold text-white text-sm sm:text-base group-hover:text-gold-200 transition-colors">
+                  <h4 className="font-display font-bold text-white text-sm sm:text-base group-hover:text-gold-200 transition-colors [text-wrap:pretty]">
                     {del.title}
                   </h4>
-                  <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mt-2">
+                  <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mt-2 [text-wrap:pretty]">
                     {del.desc}
                   </p>
                 </div>
