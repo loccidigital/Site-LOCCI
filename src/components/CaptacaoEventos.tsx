@@ -48,9 +48,6 @@ export default function CaptacaoEventos({ onCtaClick }: CaptacaoEventosProps) {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black tracking-tight text-white mt-4 mb-4 [text-wrap:pretty]">
             A LOCCI vai ao seu evento e entrega tudo pronto pra você usar
           </h2>
-          <p className="text-gray-300 text-sm sm:text-base leading-relaxed [text-wrap:pretty]">
-            Nós captamos tudo com qualidade profissional, ângulos intencionais e entregamos o material finalizado nas suas mãos. Você vive o momento; a LOCCI cuida da sua autoridade nas telas.
-          </p>
         </div>
 
         {/* Cinematic Device / Reels Overlay Stack preview */}
