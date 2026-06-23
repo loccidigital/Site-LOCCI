@@ -57,10 +57,11 @@ export default function Header({ currentTab, onNavigate, openDiagnosticModal }: 
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          {/* Logo */}
+
+          {/* Logo — apenas ícone, sem texto */}
           <div
             onClick={() => handleNavClick("home")}
-            className="flex items-center gap-2 cursor-pointer group"
+            className="flex items-center cursor-pointer group"
             id="logo-container"
           >
             <img
@@ -68,9 +69,6 @@ export default function Header({ currentTab, onNavigate, openDiagnosticModal }: 
               alt="LOCCI"
               className="h-10 w-auto group-hover:scale-105 transition-transform"
             />
-            <span className="text-white font-display font-semibold text-xl tracking-wider uppercase">
-              LOCCI
-            </span>
           </div>
 
           {/* Desktop Navigation */}
@@ -133,10 +131,8 @@ export default function Header({ currentTab, onNavigate, openDiagnosticModal }: 
         >
           <div>
             <div className="flex items-center justify-between mb-8">
-              <div className="flex items-center gap-2">
-                <img src={logoLocci} alt="LOCCI" className="h-8 w-auto" />
-                <span className="text-white font-display font-semibold text-lg tracking-wider uppercase">LOCCI</span>
-              </div>
+              {/* Logo mobile — apenas ícone */}
+              <img src={logoLocci} alt="LOCCI" className="h-8 w-auto" />
               <button
                 onClick={() => setIsOpen(false)}
                 className="p-2 text-gray-400 hover:text-white transition-colors"
@@ -144,7 +140,6 @@ export default function Header({ currentTab, onNavigate, openDiagnosticModal }: 
                 <X className="w-5 h-5" />
               </button>
             </div>
-
             <div className="flex flex-col gap-1">
               {navItems.map((item) => (
                 <button
@@ -162,7 +157,6 @@ export default function Header({ currentTab, onNavigate, openDiagnosticModal }: 
               ))}
             </div>
           </div>
-
           <div className="flex flex-col gap-4">
             <button
               onClick={() => {
