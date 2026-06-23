@@ -43,10 +43,10 @@ export default function GoogleCompleto({ onCtaClick }: GoogleCompletoProps) {
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 border border-blue-500/20 text-xs font-mono font-bold uppercase tracking-wider">
               <Search className="w-3.5 h-3.5" /> Google Completo LOCCI
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-navy-950 tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-navy-950 tracking-tight leading-tight [text-wrap:pretty]">
               Seu cliente está procurando o que você faz agora mesmo. <span className="text-gold-500">Ele te acha?</span>
             </h2>
-            <p className="text-gray-600 text-base sm:text-lg">
+            <p className="text-gray-600 text-base sm:text-lg [text-wrap:pretty]">
               A maioria das empresas perdem clientes valiosos todos os dias simplesmente por invisibilidade digital no Google. Nós resolvemos isso de forma integrada.
             </p>
           </div>
@@ -97,7 +97,7 @@ export default function GoogleCompleto({ onCtaClick }: GoogleCompletoProps) {
                     </div>
                     <span className="text-[10px] text-gray-400 font-mono">(152 avaliações • Empresa Recomendada)</span>
                   </div>
-                  <p className="text-gray-500 text-[11px] pl-6">
+                  <p className="text-gray-500 text-[11px] pl-6 [text-wrap:pretty]">
                     Destaque absoluto em atendimento premium na região. Atendimento ágil e consultoria personalizada. Solicite um orçamento imediato pelo WhatsApp agora.
                   </p>
                 </div>
@@ -108,7 +108,7 @@ export default function GoogleCompleto({ onCtaClick }: GoogleCompletoProps) {
                     <MapPin className="w-4 h-4 text-red-500 animate-bounce" />
                     <span className="font-bold text-gray-900 text-xs sm:text-sm">Seu Perfil no Mapa do Google (Top 3)</span>
                   </div>
-                  <p className="text-[11px] text-gray-500 pl-6">Listado logo abaixo dos anúncios patrocinados, gerando ligações e rotas de GPS diárias de forma orgânica.</p>
+                  <p className="text-[11px] text-gray-500 pl-6 [text-wrap:pretty]">Listado logo abaixo dos anúncios patrocinados, gerando ligações e rotas de GPS diárias de forma orgânica.</p>
                 </div>
 
               </div>
@@ -122,26 +122,26 @@ export default function GoogleCompleto({ onCtaClick }: GoogleCompletoProps) {
             <div className="flex items-start gap-3 p-4 bg-red-500/5 rounded-xl border border-red-500/10 text-red-700">
               <AlertTriangle className="w-5 h-5 flex-shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-bold text-xs sm:text-sm">Ter um bom produto e não aparecer no Google é o mesmo que não existir</h4>
-                <p className="text-xs text-gray-600 mt-1 leading-relaxed">
+                <h4 className="font-bold text-xs sm:text-sm [text-wrap:pretty]">Ter um bom produto e não aparecer no Google é o mesmo que não existir</h4>
+                <p className="text-xs text-gray-600 mt-1 leading-relaxed [text-wrap:pretty]">
                   Seu concorrente local não é necessariamente melhor do que você. Ele só está melhor posicionado digitalmente onde o seu cliente está procurando.
                 </p>
               </div>
             </div>
 
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed [text-wrap:pretty]">
               Com o serviço de <strong>Google Completo</strong> da LOCCI, nós cobrimos todo o ecossistema de maior intenção de compra. Você não depende apenas de um post orgânico no Instagram que some em 24h. Você capta o lead no exato segundo em que ele precisa do seu produto.
             </p>
 
             <div className="space-y-4 mt-2">
               {processSteps.map((step, idx) => (
                 <div key={idx} className="flex gap-4">
-                  <div className="w-6 h-6 rounded-full bg-gold-500/20 text-gold-500 flex items-center justify-center text-xs font-bold mt-1">
+                  <div className="w-6 h-6 rounded-full bg-gold-500/20 text-gold-500 flex items-center justify-center text-xs font-bold mt-1 flex-shrink-0">
                     {idx + 1}
                   </div>
                   <div>
                     <h4 className="font-display font-bold text-navy-950 text-sm sm:text-base">{step.title}</h4>
-                    <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mt-1">{step.desc}</p>
+                    <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mt-1 [text-wrap:pretty]">{step.desc}</p>
                   </div>
                 </div>
               ))}
@@ -157,10 +157,10 @@ export default function GoogleCompleto({ onCtaClick }: GoogleCompletoProps) {
           <div className="absolute bottom-0 left-0 w-32 h-32 bg-gold-500/10 rounded-full blur-2xl" />
 
           <div className="relative z-10 flex flex-col items-center gap-6">
-            <h3 className="text-2xl sm:text-3xl font-display font-black tracking-tight text-white">
+            <h3 className="text-2xl sm:text-3xl font-display font-black tracking-tight text-white [text-wrap:pretty]">
               Vamos colocar seu negócio frente a frente de quem está procurando você
             </h3>
-            <p className="text-xs sm:text-sm text-gray-400 max-w-xl">
+            <p className="text-xs sm:text-sm text-gray-400 max-w-xl [text-wrap:pretty]">
               Deixe nossa equipe auditar sua presença no Google. Iremos mapear o seu perfil atual e apontar exatamente onde você está perdendo vendas de forma gratuita.
             </p>
             <button
