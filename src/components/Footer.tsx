@@ -34,15 +34,12 @@ export default function Footer({ onNavClick }: FooterProps) {
 
         {/* Left column: brand details */}
         <div className="md:col-span-5 space-y-5" id="footer-brand-section">
-          <div className="flex items-center gap-2 cursor-pointer group" onClick={() => handleNav("home")}>
-            <div className="relative w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-tr from-gold-600 to-gold-200 p-[1px]">
-              <div className="w-full h-full bg-navy-950 rounded-[7px] flex items-center justify-center">
-                <span className="text-gold-500 font-display font-black text-base tracking-widest">L</span>
-              </div>
-            </div>
-            <span className="text-white font-display font-bold text-lg tracking-wider uppercase">
-              LOCCI <span className="text-gold-500 font-light">Digital</span>
-            </span>
+          <div className="cursor-pointer" onClick={() => handleNav("home")}>
+            <img
+              src="/locci-logo-rodape.png"
+              alt="LOCCI Digital"
+              className="h-10 w-auto"
+            />
           </div>
 
           <p className="text-sm max-w-sm leading-relaxed text-gray-400 [text-wrap:pretty]">
