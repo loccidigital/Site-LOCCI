@@ -170,7 +170,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <p className="text-xs font-bold text-white">Diagnóstico Honestidade</p>
+              <p className="text-xs font-bold text-white">Diagnóstico Honesto</p>
               <p className="text-[10px] text-gray-500">Sem mentiras, sem promessas falsas.</p>
             </div>
           </div>
