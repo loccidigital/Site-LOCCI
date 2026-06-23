@@ -48,10 +48,10 @@ export default function Metodo({ onCtaClick }: MetodoProps) {
           <span className="text-xs font-mono font-bold text-gold-500 uppercase tracking-widest bg-white/5 px-3 py-1.5 rounded-full border border-white/10">
             Metodologia LOCCI
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black tracking-tight text-white mt-4 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black tracking-tight text-white mt-4 mb-6 [text-wrap:pretty]">
             Método P² — Prático e Personalizado
           </h2>
-          <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+          <p className="text-gray-300 text-base sm:text-lg leading-relaxed [text-wrap:pretty]">
             Nada de pacote genérico. Nada de estratégia copiada. O método P² é o jeito LOCCI de trabalhar:
             a gente mergulha no seu negócio, entende sua história, seus valores e seus objetivos para que assim
             a gente possa montar um plano de ação claro, direto e que você consegue acompanhar passo a passo.
@@ -62,7 +62,7 @@ export default function Metodo({ onCtaClick }: MetodoProps) {
         <div className="bg-navy-900/60 p-6 sm:p-8 rounded-2xl border border-white/10 shadow-2xl mb-20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8 border-b border-white/5 pb-6">
             <div>
-              <h3 className="text-xl font-display font-bold text-white">Como você quer operar o marketing da sua empresa?</h3>
+              <h3 className="text-xl font-display font-bold text-white [text-wrap:pretty]">Como você quer operar o marketing da sua empresa?</h3>
               <p className="text-xs sm:text-sm text-gray-400">Clique nos estados abaixo para ver a diferença prática.</p>
             </div>
 
@@ -109,7 +109,7 @@ export default function Metodo({ onCtaClick }: MetodoProps) {
                   <div className="flex-1 flex items-center justify-center py-4">
                     <div className="w-full max-w-[280px] stroke-red-500/60 flex flex-col items-center gap-2 text-center">
                       <div className="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 text-lg animate-pulse">❓</div>
-                      <p className="text-xs text-gray-400 max-w-[220px]">Anúncios jogados no lixo, posts diários sem engajamento, dependência do acaso e zero previsibilidade comercial.</p>
+                      <p className="text-xs text-gray-400 max-w-[220px] [text-wrap:pretty]">Anúncios jogados no lixo, posts diários sem engajamento, dependência do acaso e zero previsibilidade comercial.</p>
                     </div>
                   </div>
                   <span className="text-[10px] text-gray-600 font-mono text-center block uppercase tracking-widest">Insegurança & Dinheiro no Ralo</span>
@@ -145,7 +145,7 @@ export default function Metodo({ onCtaClick }: MetodoProps) {
 
             {/* Explanatory text grid */}
             <div className="flex flex-col justify-center gap-4">
-              <h4 className="text-lg font-display font-semibold text-white">
+              <h4 className="text-lg font-display font-semibold text-white [text-wrap:pretty]">
                 {activeContrastTab === "without"
                   ? "As dores do marketing genérico tradicional"
                   : "Por que o Método P² funciona de verdade"
@@ -190,10 +190,10 @@ export default function Metodo({ onCtaClick }: MetodoProps) {
         </div>
 
         {/* Pilares do Método P² Grid */}
-        <h3 className="text-2xl sm:text-3xl font-display font-black text-center text-white mb-2">
+        <h3 className="text-2xl sm:text-3xl font-display font-black text-center text-white mb-2 [text-wrap:pretty]">
           Pilares Operacionais do Método P²
         </h3>
-        <p className="text-gray-400 text-sm text-center max-w-lg mx-auto mb-12">
+        <p className="text-gray-400 text-sm text-center max-w-lg mx-auto mb-12 [text-wrap:pretty]">
           Garantimos estrutura, velocidade e direção estratégica integrada para sua empresa faturar mais.
         </p>
 
@@ -211,7 +211,7 @@ export default function Metodo({ onCtaClick }: MetodoProps) {
                 <h4 className="text-lg font-display font-bold text-white mb-3 group-hover:text-gold-200 transition-colors">
                   {pilar.title}
                 </h4>
-                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">
+                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6 [text-wrap:pretty]">
                   {pilar.desc}
                 </p>
               </div>
