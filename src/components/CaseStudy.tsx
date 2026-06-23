@@ -1,4 +1,4 @@
-import { CheckCircle, Trophy, Star, ArrowRight, Activity } from "lucide-react";
+import { CheckCircle, Trophy, Star, ArrowRight, Activity, CalendarDays } from "lucide-react";
 
 export default function CaseStudy() {
   const steps = [
@@ -26,20 +26,20 @@ export default function CaseStudy() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-        {/* Header case title */}
+        {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16" id="case-header">
           <span className="text-xs font-mono font-bold text-gold-600 uppercase tracking-widest bg-gold-100/50 px-3.5 py-1.5 rounded-full border border-gold-200">
-            Case de Sucesso
+            ★ Case de Sucesso em Destaque
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black tracking-tight text-navy-950 mt-4 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black tracking-tight text-navy-950 mt-4 mb-4 [text-wrap:pretty]">
             Do absoluto zero a 40 clientes qualificados por mês
           </h2>
-          <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-gray-600 text-sm sm:text-base leading-relaxed [text-wrap:pretty]">
             A Casa Travertino chegou até nós antes mesmo de ter um nome definido. Construímos todo o posicionamento digital da marca do absoluto zero e estruturamos um funil previsível de faturamento local.
           </p>
         </div>
 
-        {/* Core Case Study Content Board */}
+        {/* Core Content */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
 
           {/* Left panel */}
@@ -58,7 +58,6 @@ export default function CaseStudy() {
                 </span>
               </div>
 
-              {/* Stats board */}
               <div className="grid grid-cols-2 gap-4 mt-6">
                 <div className="bg-white/5 p-4 rounded-xl border border-white/5">
                   <span className="text-[10px] text-gray-400 font-mono uppercase block">Status Inicial</span>
@@ -72,51 +71,52 @@ export default function CaseStudy() {
                 </div>
               </div>
 
-              {/* Faturamento highlight — substituiu o card do showroom */}
-              <div className="mt-6 rounded-xl border border-gold-500/40 bg-gold-500/10 p-4 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-gold-500/20 flex items-center justify-center">
-                    <Activity className="w-4 h-4 text-gold-400" />
+              <div className="bg-gradient-to-tr from-gold-100 to-gold-50 p-[1.5px] rounded-xl border border-white/5 mt-6">
+                <div className="bg-navy-900 rounded-[11px] p-4 flex items-center justify-between text-xs">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded bg-gold-200 flex items-center justify-center font-bold text-navy-950">
+                      <Activity className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="block font-bold">Impacto Financeiro</span>
+                      <span className="text-[9px] text-gray-400">Aumento Relevante de Faturamento</span>
+                    </div>
                   </div>
-                  <div>
-                    <span className="block text-xs font-bold text-gold-400 uppercase tracking-wider">Impacto Financeiro</span>
-                    <span className="block text-sm font-display font-black text-white">Aumento Relevante de Faturamento</span>
-                  </div>
+                  <Trophy className="w-5 h-5 text-gold-500" />
                 </div>
-                <Trophy className="w-5 h-5 text-gold-500" />
               </div>
             </div>
 
-            {/* 2 stat cards */}
-            <div className="grid grid-cols-2 gap-4" id="case-stats-ticker">
-              <div className="bg-gold-50 p-5 rounded-xl border border-gold-200 text-center">
-                <span className="block text-2xl sm:text-3xl font-display font-extrabold text-navy-900">100%</span>
+            <div className="grid grid-cols-3 gap-4" id="case-stats-ticker">
+              <div className="bg-gold-50 p-4 rounded-xl border border-gold-200 text-center">
+                <span className="block text-2xl font-display font-extrabold text-navy-900">40</span>
+                <span className="text-[10px] text-gray-500 uppercase font-mono tracking-wider block mt-1">Leads /mês</span>
+              </div>
+              <div className="bg-gold-50 p-4 rounded-xl border border-gold-200 text-center">
+                <span className="block text-2xl font-display font-extrabold text-navy-900">0→100%</span>
                 <span className="text-[10px] text-gray-500 uppercase font-mono tracking-wider block mt-1">Marca Estruturada</span>
               </div>
-              <div className="bg-gold-50 p-5 rounded-xl border border-gold-200 text-center">
-                <span className="block text-2xl sm:text-3xl font-display font-extrabold text-navy-900">20x</span>
+              <div className="bg-gold-50 p-4 rounded-xl border border-gold-200 text-center">
+                <span className="block text-2xl font-display font-extrabold text-navy-900">10x</span>
                 <span className="text-[10px] text-gray-500 uppercase font-mono tracking-wider block mt-1">Retorno de ROI</span>
               </div>
             </div>
           </div>
 
-          {/* Right panel: Strategic actions */}
+          {/* Right panel */}
           <div className="lg:col-span-6 flex flex-col justify-between" id="case-deliverables">
             <div className="space-y-6">
-              <h3 className="text-2xl font-display font-black text-navy-950">
+              <h3 className="text-2xl font-display font-black text-navy-950 [text-wrap:pretty]">
                 Como construímos essa história de sucesso do absoluto zero:
               </h3>
-              <p className="text-gray-600 text-sm sm:text-base">
-                Analisamos o mercado de revestimentos de luxo na região e identificamos que os concorrentes focavam apenas em panfletagem e stories genéricos sem intenção comercial. Desenhamos a jornada completa:
-              </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {steps.map((step, idx) => (
                   <div key={idx} className="bg-gold-50/50 p-5 rounded-xl border border-gold-100 flex flex-col gap-2">
                     <h4 className="font-display font-bold text-navy-950 text-sm sm:text-base">
                       {step.title}
                     </h4>
-                    <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
+                    <p className="text-gray-500 text-xs sm:text-sm leading-relaxed [text-wrap:pretty]">
                       {step.desc}
                     </p>
                   </div>
@@ -132,7 +132,7 @@ export default function CaseStudy() {
           <div className="relative bg-gradient-to-r from-gold-50 to-gold-100 p-8 sm:p-12 rounded-3xl border border-gold-200 shadow-md">
             <span className="absolute top-4 left-6 text-7xl font-display text-gold-500/20 select-none pointer-events-none">"</span>
             <div className="relative z-10 flex flex-col gap-6">
-              <p className="text-navy-950 text-base sm:text-lg lg:text-xl font-medium italic leading-relaxed text-center">
+              <p className="text-navy-950 text-base sm:text-lg lg:text-xl font-medium italic leading-relaxed text-center [text-wrap:pretty]">
                 "Muito obrigada por toda a ajuda gente, tá tudo um sonho. Vocês pegaram nosso sonho, uma ideia que a gente só tinha na cabeça e tornaram real."
               </p>
               <div className="flex items-center justify-center gap-3">
