@@ -55,17 +55,21 @@ export default function CaptacaoEventos({ onCtaClick }: CaptacaoEventosProps) {
 
           {/* Left panel: Bullet storytelling */}
           <div className="lg:col-span-5 space-y-6" id="event-narrative">
-            <h3 className="text-2xl font-display font-extrabold text-white [text-wrap:pretty]">
-              Seu evento foi incrível, mas você não tem nenhum bom registro real para divulgar?
-            </h3>
-            <p className="text-gray-400 text-sm sm:text-base leading-relaxed [text-wrap:pretty]">
-              Celular tremendo, áudio falho e luz estourada não transmitem o verdadeiro padrão de valor do seu serviço. No final, o material amador não faz jus ao impacto real que o seu evento presencial causou.
-            </p>
-            <p className="text-gray-400 text-sm sm:text-base leading-relaxed [text-wrap:pretty]">
-              Nossa equipe carrega equipamentos de primeira linha para estruturar um storytelling audiovisual forte. Capturamos depoimentos de convidados em tempo real, mostramos a energia do espaço físico e transformamos esse momento em uma poderosa máquina de marketing para fechar novos negócios futuros.
-            </p>
+            {/* Texto narrativo — oculto no mobile */}
+            <div className="hidden lg:block space-y-6">
+              <h3 className="text-2xl font-display font-extrabold text-white [text-wrap:pretty]">
+                Seu evento foi incrível, mas você não tem nenhum bom registro real para divulgar?
+              </h3>
+              <p className="text-gray-400 text-sm sm:text-base leading-relaxed [text-wrap:pretty]">
+                Celular tremendo, áudio falho e luz estourada não transmitem o verdadeiro padrão de valor do seu serviço. No final, o material amador não faz jus ao impacto real que o seu evento presencial causou.
+              </p>
+              <p className="text-gray-400 text-sm sm:text-base leading-relaxed [text-wrap:pretty]">
+                Nossa equipe carrega equipamentos de primeira linha para estruturar um storytelling audiovisual forte. Capturamos depoimentos de convidados em tempo real, mostramos a energia do espaço físico e transformamos esse momento em uma poderosa máquina de marketing para fechar novos negócios futuros.
+              </p>
+            </div>
 
-            <div className="pt-4">
+            {/* Botão — visível apenas no desktop aqui */}
+            <div className="pt-4 hidden lg:flex">
               <button
                 onClick={onCtaClick}
                 className="px-6 py-3.5 rounded-xl font-bold text-xs tracking-wider uppercase text-navy-950 bg-gold-500 hover:bg-gold-600 transition-all inline-flex items-center gap-2 cursor-pointer"
@@ -166,6 +170,17 @@ export default function CaptacaoEventos({ onCtaClick }: CaptacaoEventosProps) {
               </div>
             );
           })}
+        </div>
+
+        {/* Botão CTA — visível apenas no mobile, após os cards */}
+        <div className="flex lg:hidden justify-center mt-10">
+          <button
+            onClick={onCtaClick}
+            className="w-full max-w-sm px-6 py-4 rounded-xl font-bold text-xs tracking-wider uppercase text-navy-950 bg-gold-500 hover:bg-gold-600 transition-all inline-flex items-center justify-center gap-2 cursor-pointer"
+          >
+            Garantir Captura no Meu Evento
+            <Play className="w-3.5 h-3.5 fill-navy-950 text-navy-950" />
+          </button>
         </div>
 
       </div>
