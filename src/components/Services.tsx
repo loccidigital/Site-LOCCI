@@ -139,7 +139,7 @@ export default function Services({ onServiceSelect }: ServicesProps) {
             Como podemos ajudar seu negócio?
           </h2>
           <p className="text-gray-400 text-sm sm:text-base leading-relaxed [text-wrap:pretty]">
-            Unimos o melhor de dois mundos: captação visual premium e anúncios estratégicos focados em conversão imediata. Conheça nossos serviços.
+            Unimos o melhor de dois mundos: captação visual de qualidade e anúncios estratégicos focados em conversão imediata. Conheça nossos serviços.
           </p>
         </div>
 
