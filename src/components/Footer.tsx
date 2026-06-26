@@ -44,7 +44,7 @@ export default function Footer({ onNavClick }: FooterProps) {
           </div>
 
           <p className="text-sm max-w-sm leading-relaxed text-gray-400 [text-wrap:pretty]">
-            A LOCCI Digital é uma agência boutique de inteligência de marketing premium e alta conversão regional. Construímos autoridade, criamos mídias cinematográficas e dominamos mecanismos de busca locais.
+            A LOCCI Digital é uma agência de inteligência de marketing de qualidade e alta conversão regional. Construímos autoridade, criamos mídias cinematográficas e dominamos mecanismos de busca locais.
           </p>
 
           {/* Social icons */}
