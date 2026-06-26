@@ -98,7 +98,7 @@ export default function GoogleCompleto({ onCtaClick }: GoogleCompletoProps) {
                     <span className="text-[10px] text-gray-400 font-mono">(152 avaliações • Empresa Recomendada)</span>
                   </div>
                   <p className="text-gray-500 text-[11px] pl-6 [text-wrap:pretty]">
-                    Destaque absoluto em atendimento premium na região. Atendimento ágil e consultoria personalizada. Solicite um orçamento imediato pelo WhatsApp agora.
+                    Destaque absoluto em atendimento de qualidade na região. Atendimento ágil e consultoria personalizada. Solicite um orçamento imediato pelo WhatsApp agora.
                   </p>
                 </div>
 
