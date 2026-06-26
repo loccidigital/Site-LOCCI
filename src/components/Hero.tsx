@@ -156,7 +156,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
                   </div>
                   <div>
                     <span className="text-[9px] text-gray-400 font-mono font-bold">Eventos</span>
-                    <p className="text-xs font-bold text-white">Captura Premium</p>
+                    <p className="text-xs font-bold text-white">Captura de Qualidade</p>
                   </div>
                 </div>
               </div>
