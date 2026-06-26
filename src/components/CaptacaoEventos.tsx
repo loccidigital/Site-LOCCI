@@ -43,7 +43,7 @@ export default function CaptacaoEventos({ onCtaClick }: CaptacaoEventosProps) {
         {/* Upper Title block */}
         <div className="max-w-3xl mx-auto text-center mb-16" id="event-header">
           <span className="text-xs font-mono font-bold text-gold-500 uppercase tracking-widest bg-white/5 py-1.5 px-3.5 rounded-full border border-white/10 inline-flex items-center gap-1.5">
-            <Film className="w-3.5 h-3.5 text-gold-500" /> Cobertura Audiovisual Premium
+            <Film className="w-3.5 h-3.5 text-gold-500" /> Cobertura Audiovisual de Qualidade
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black tracking-tight text-white mt-4 mb-4 [text-wrap:pretty]">
             A LOCCI vai ao seu evento e entrega tudo pronto pra você usar
