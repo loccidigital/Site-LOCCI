@@ -55,16 +55,13 @@ export default function CaptacaoEventos({ onCtaClick }: CaptacaoEventosProps) {
 
           {/* Left panel: Bullet storytelling */}
           <div className="lg:col-span-5 space-y-6" id="event-narrative">
-            {/* Texto narrativo — oculto no mobile */}
-            <div className="hidden lg:block space-y-6">
+            {/* Texto narrativo — visível em todos os tamanhos */}
+            <div className="space-y-4">
               <h3 className="text-2xl font-display font-extrabold text-white [text-wrap:pretty]">
-                Seu evento foi incrível, mas você não tem nenhum bom registro real para divulgar?
+                Seu evento foi incrível, mas você não tem um bom registro para divulgar?
               </h3>
               <p className="text-gray-400 text-sm sm:text-base leading-relaxed [text-wrap:pretty]">
-                Celular tremendo, áudio falho e luz estourada não transmitem o verdadeiro padrão de valor do seu serviço. No final, o material amador não faz jus ao impacto real que o seu evento presencial causou.
-              </p>
-              <p className="text-gray-400 text-sm sm:text-base leading-relaxed [text-wrap:pretty]">
-                Nossa equipe carrega equipamentos de primeira linha para estruturar um storytelling audiovisual forte. Capturamos depoimentos de convidados em tempo real, mostramos a energia do espaço físico e transformamos esse momento em uma poderosa máquina de marketing para fechar novos negócios futuros.
+                Celular tremendo e luz estourada não refletem o valor real do que aconteceu. A LOCCI captura tudo com equipamentos profissionais e transforma o momento em conteúdo que gera autoridade e novos negócios.
               </p>
             </div>
 
