@@ -4,7 +4,7 @@ export default function CaseStudy() {
   const steps = [
     {
       title: "01. Nome & Identidade",
-      desc: "Análise de público premium e desenvolvimento do nome 'Casa Travertino', traduzindo sofisticação, solidez e acabamento de alto padrão."
+      desc: "Análise de público de qualidade e desenvolvimento do nome 'Casa Travertino', traduzindo sofisticação, solidez e acabamento de alto padrão."
     },
     {
       title: "02. Site & Vitrine",
@@ -93,7 +93,7 @@ export default function CaseStudy() {
                 <span className="text-[10px] text-gray-500 uppercase font-mono tracking-wider block mt-1">Leads /mês</span>
               </div>
               <div className="bg-gold-50 p-4 rounded-xl border border-gold-200 text-center">
-                <span className="block text-2xl font-display font-extrabold text-navy-900">100%</span>
+                <span className="block text-2xl font-display font-extrabold text-navy-900">0→100%</span>
                 <span className="text-[10px] text-gray-500 uppercase font-mono tracking-wider block mt-1">Marca Estruturada</span>
               </div>
               <div className="bg-gold-50 p-4 rounded-xl border border-gold-200 text-center">
