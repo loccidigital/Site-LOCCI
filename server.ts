@@ -6,13 +6,68 @@ import { createServer as createViteServer } from "vite";
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
-app.use(express.json());
+// ─── Security Headers ──────────────────────────────────────────────────────────
+app.use((_req, res, next) => {
+  res.setHeader("X-Content-Type-Options", "nosniff");
+  res.setHeader("X-Frame-Options", "SAMEORIGIN");
+  res.setHeader("X-XSS-Protection", "1; mode=block");
+  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+  res.setHeader("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
+  if (process.env.NODE_ENV === "production") {
+    res.setHeader("Strict-Transport-Security", "max-age=63072000; includeSubDomains; preload");
+  }
+  next();
+});
+
+// ─── Simple in-memory rate limiter for /api/leads ─────────────────────────────
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT = 5;       // max requests
+const RATE_WINDOW = 60_000; // per 60 seconds
+
+function rateLimit(req: express.Request, res: express.Response, next: express.NextFunction) {
+  const ip = (req.headers["x-forwarded-for"] as string)?.split(",")[0]?.trim() || req.socket.remoteAddress || "unknown";
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_WINDOW });
+    return next();
+  }
+  if (entry.count >= RATE_LIMIT) {
+    return res.status(429).json({ error: "Muitas requisições. Tente novamente em 1 minuto." });
+  }
+  entry.count++;
+  next();
+}
+
+// ─── Input sanitizer ──────────────────────────────────────────────────────────
+function sanitize(str: unknown): string {
+  if (typeof str !== "string") return "";
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;");
+}
+
+app.use(express.json({ limit: "10kb" }));
 
 // POST /api/leads — recebe dados do formulário e envia email via Resend
-app.post("/api/leads", async (req, res) => {
-  const { nome, whatsapp, empresa, instagram, segment, mainChannels, biggestPain, investimento } = req.body;
+app.post("/api/leads", rateLimit, async (req, res) => {
+  const raw = req.body;
+
+  const nome        = sanitize(raw.nome);
+  const whatsapp    = sanitize(raw.whatsapp);
+  const empresa     = sanitize(raw.empresa);
+  const instagram   = sanitize(raw.instagram);
+  const segment     = sanitize(raw.segment);
+  const biggestPain = sanitize(raw.biggestPain);
+  const investimento = sanitize(raw.investimento);
+  const mainChannels = Array.isArray(raw.mainChannels)
+    ? raw.mainChannels.map((c: unknown) => sanitize(c)).join(", ")
+    : "—";
 
   if (!nome || !whatsapp) {
     return res.status(400).json({ error: "Nome e WhatsApp são obrigatórios." });
@@ -20,7 +75,6 @@ app.post("/api/leads", async (req, res) => {
 
   const resendApiKey = process.env.RESEND_API_KEY;
   if (!resendApiKey) {
-    console.warn("⚠️ RESEND_API_KEY não configurada.");
     return res.status(500).json({ error: "Configuração de email ausente." });
   }
 
@@ -59,7 +113,7 @@ app.post("/api/leads", async (req, res) => {
           </tr>
           <tr style="border-bottom: 1px solid #f3f4f6;">
             <td style="padding: 10px 0; color: #6b7280;">Canais Atuais</td>
-            <td style="padding: 10px 0; color: #111827;">${Array.isArray(mainChannels) && mainChannels.length > 0 ? mainChannels.join(", ") : "—"}</td>
+            <td style="padding: 10px 0; color: #111827;">${mainChannels}</td>
           </tr>
           <tr style="border-bottom: 1px solid #f3f4f6;">
             <td style="padding: 10px 0; color: #6b7280;">Maior Dificuldade</td>
