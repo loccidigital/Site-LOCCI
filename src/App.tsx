@@ -124,7 +124,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-navy-950 text-gray-100 flex flex-col font-sans select-none antialiased relative">
+    <div className="min-h-screen bg-navy-950 text-gray-100 flex flex-col font-sans antialiased relative">
       <Header
         currentTab={currentTab}
         onNavigate={navigateTo}
