@@ -77,53 +77,36 @@ export default function CaptacaoEventos({ onCtaClick }: CaptacaoEventosProps) {
             </div>
           </div>
 
-          {/* Right panel: Phone simulator modeling stories capture */}
+          {/* Right panel: YouTube Shorts embed inside phone frame */}
           <div className="lg:col-span-7 flex justify-center" id="stories-mockup-container">
-            <div className="relative w-full max-w-[400px]">
+            <div className="relative w-full max-w-[300px]">
 
-              {/* Main Simulated Phone Frame */}
-              <div className="relative rounded-[36px] bg-navy-900 border-4 border-white/10 p-2.5 shadow-2xl overflow-hidden aspect-[9/16] max-h-[500px] mx-auto flex flex-col justify-between">
+              {/* Phone frame outer shell */}
+              <div className="relative rounded-[40px] bg-navy-900 border-4 border-white/10 p-2 shadow-2xl">
 
-                {/* Selfie Cam / Speaker Detail */}
-                <span className="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-full z-20 flex items-center justify-center">
-                  <span className="w-2.5 h-2.5 rounded-full bg-blue-900/40" />
-                </span>
+                {/* Dynamic island / notch */}
+                <div className="absolute top-3 left-1/2 -translate-x-1/2 w-20 h-4 bg-black rounded-full z-20" />
 
-                {/* Main Visual background representing active recording visual */}
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-navy-950/40 z-0" />
+                {/* Video container 9:16 */}
+                <div className="relative rounded-[32px] overflow-hidden aspect-[9/16]">
+                  <iframe
+                    src="https://www.youtube.com/embed/FgP1PKVKXp8?rel=0&modestbranding=1&playsinline=1"
+                    title="Captação de Eventos LOCCI"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
 
-                {/* Simulated Content inside screen */}
-                <div className="relative z-10 p-4 pt-10 flex flex-col justify-between h-full text-white">
-
-                  {/* Top user profile header */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 bg-black/40 p-1.5 rounded-full border border-white/5 backdrop-blur-sm">
-                      <div className="w-6 h-6 rounded-full bg-gold-500 text-navy-950 font-display font-black text-[9px] flex items-center justify-center">L</div>
-                      <div>
-                        <span className="block text-[9px] font-bold">@loccidigital</span>
-                        <span className="block text-[7px] text-gray-300">Gravado agora mesmo</span>
-                      </div>
-                    </div>
-                    <span className="px-2 py-0.5 rounded bg-red-600 text-[8px] font-mono tracking-widest font-black animate-pulse">● AO VIVO</span>
-                  </div>
-
-                  {/* Play circle button overlay to trigger feeling */}
-                  <div className="flex items-center justify-center pb-12 cursor-pointer group">
-                    <div className="w-16 h-16 rounded-full bg-gold-500/20 border border-gold-500/50 flex items-center justify-center group-hover:scale-105 transition-transform">
-                      <Play className="w-6 h-6 text-gold-500 fill-gold-500 ml-1" />
-                    </div>
-                  </div>
-
-                  {/* Text details bottom of screen */}
-                  <div className="space-y-2 bg-black/50 p-3 rounded-xl border border-white/5 backdrop-blur-sm">
-                    <span className="text-[8px] font-mono text-gold-500 font-bold uppercase tracking-wider">Momento Captado</span>
-                    <h4 className="text-xs font-bold leading-tight [text-wrap:pretty]">Posicionamento e Entrega Cinematográfica do seu Showroom</h4>
-                    <p className="text-[9px] text-gray-300">Geração de desejo e autoridade em segundos de tela.</p>
-                  </div>
-
+                {/* Bottom home bar detail */}
+                <div className="flex justify-center pt-2 pb-1">
+                  <div className="w-24 h-1 bg-white/20 rounded-full" />
                 </div>
 
               </div>
+
+              {/* Glow decoration */}
+              <div className="absolute -inset-4 bg-gold-500/10 rounded-full blur-3xl -z-10 pointer-events-none" />
 
             </div>
           </div>
