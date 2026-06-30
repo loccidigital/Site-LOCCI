@@ -1,9 +1,10 @@
 import { useState, useRef, FormEvent } from "react";
-import { ArrowRight, ShieldCheck, Loader2, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ShieldCheck, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 
 export default function AIForm() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [leadName, setLeadName] = useState("");
   const sectionRef = useRef<HTMLElement>(null);
   const [formData, setFormData] = useState({
@@ -87,19 +88,25 @@ export default function AIForm() {
       return;
     }
     setLoading(true);
+    setSubmitError("");
     try {
-      await fetch("/api/leads", {
+      const res = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setSubmitError(data.error || "Erro ao enviar. Tente novamente ou nos contacte pelo WhatsApp.");
+        return;
+      }
       setLeadName(formData.nome.split(" ")[0]);
       setSubmitted(true);
       setTimeout(() => {
         sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
       }, 50);
-    } catch (err) {
-      console.error("Erro ao enviar lead:", err);
+    } catch (_err) {
+      setSubmitError("Sem conexão. Verifique sua internet e tente novamente.");
     } finally {
       setLoading(false);
     }
@@ -299,6 +306,14 @@ export default function AIForm() {
                 Suas informações são enviadas diretamente à equipe da LOCCI e nunca compartilhadas com terceiros. Total sigilo garantido.
               </span>
             </div>
+
+            {/* Error message */}
+            {submitError && (
+              <div className="flex items-start gap-2.5 p-3.5 bg-red-500/10 rounded-xl border border-red-500/20 text-xs text-red-400">
+                <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                <span>{submitError}</span>
+              </div>
+            )}
 
             {/* Submit */}
             <div className="pt-4 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
