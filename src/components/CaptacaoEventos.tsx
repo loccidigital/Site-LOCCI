@@ -91,9 +91,10 @@ export default function CaptacaoEventos({ onCtaClick }: CaptacaoEventosProps) {
                 <div className="relative rounded-[32px] overflow-hidden aspect-[9/16]">
                   <iframe
                     src="https://www.youtube.com/embed/FgP1PKVKXp8?rel=0&modestbranding=1&playsinline=1"
-                    title="Captação de Eventos LOCCI"
+                    title="Captação de Eventos LOCCI — Cobertura Audiovisual Profissional"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
+                    loading="lazy"
                     className="absolute inset-0 w-full h-full"
                   />
                 </div>
