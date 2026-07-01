@@ -43,8 +43,8 @@ export default function Footer({ onNavClick }: FooterProps) {
             />
           </div>
 
-          <p className="text-sm max-w-sm leading-relaxed text-gray-400 [text-wrap:pretty]">
-            A LOCCI Digital é uma agência de inteligência de marketing de qualidade e alta conversão regional. Construímos autoridade, criamos mídias cinematográficas e dominamos mecanismos de busca locais.
+          <p className="text-sm leading-relaxed text-gray-400 max-w-[280px]">
+            A LOCCI é uma agência de marketing digital, construída com o desejo e foco de transformar o marketing de negócios locais.
           </p>
 
           {/* Social icons */}
@@ -101,16 +101,6 @@ export default function Footer({ onNavClick }: FooterProps) {
             </a>
 
             <a
-              href="https://wa.me/5561994219292"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-2.5 hover:text-gold-500 transition-colors"
-            >
-              <MessageSquare className="w-4 h-4 text-gold-500" />
-              <span>+55 61 99421-9292</span>
-            </a>
-
-            <a
               href="https://wa.me/351913747506"
               target="_blank"
               rel="noreferrer"
@@ -119,11 +109,6 @@ export default function Footer({ onNavClick }: FooterProps) {
               <MessageSquare className="w-4 h-4 text-gold-500" />
               <span>+351 913 747 506</span>
             </a>
-
-            <div className="flex items-center gap-2.5">
-              <MapPin className="w-4 h-4 text-gold-500" />
-              <span>Brasília, BR / Alcanena, PT</span>
-            </div>
           </div>
         </div>
 
