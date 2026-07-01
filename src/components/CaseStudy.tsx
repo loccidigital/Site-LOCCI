@@ -140,7 +140,7 @@ export default function CaseStudy() {
                   C
                 </div>
                 <div>
-                  <h4 className="font-display font-bold text-navy-900 sm:text-base">Cátia</h4>
+                  <h4 className="font-display font-bold text-navy-900 sm:text-base">Kátia</h4>
                   <p className="text-xs text-gray-500 font-mono uppercase">Fundadora, Casa Travertino</p>
                 </div>
               </div>
