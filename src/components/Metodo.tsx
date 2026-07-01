@@ -19,7 +19,7 @@ export default function Metodo({ onCtaClick }: MetodoProps) {
       num: "02",
       title: "Praticidade",
       desc: "Uma estrutura altamente organizada e transparente que centraliza toda a operação da marca em um só lugar para tornar a comunicação ágil, acessível e eficiente no dia a dia.",
-      details: ["Drive único e organizado", "Centralização de materiais brutos", "Processo rápido de aprovação"]
+      details: ["Drive único e organizado", "Centralização de materiais", "Processo rápido de aprovação"]
     },
     {
       num: "03",
