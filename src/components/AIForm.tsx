@@ -162,7 +162,7 @@ export default function AIForm() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="flex flex-col gap-2">
                 <label className="text-xs font-mono font-bold text-gray-300 uppercase tracking-wider">
-                  Nome *
+                  Nome * {!formData.nome && <span className="text-red-400 text-[10px] normal-case font-normal ml-1">(obrigatório)</span>}
                 </label>
                 <input
                   type="text"
@@ -175,7 +175,7 @@ export default function AIForm() {
               </div>
               <div className="flex flex-col gap-2">
                 <label className="text-xs font-mono font-bold text-gray-300 uppercase tracking-wider">
-                  WhatsApp *
+                  WhatsApp * {!formData.whatsapp && <span className="text-red-400 text-[10px] normal-case font-normal ml-1">(obrigatório)</span>}
                 </label>
                 <input
                   type="tel"
@@ -188,7 +188,7 @@ export default function AIForm() {
               </div>
               <div className="flex flex-col gap-2">
                 <label className="text-xs font-mono font-bold text-gray-300 uppercase tracking-wider">
-                  Empresa *
+                  Empresa * {!formData.empresa && <span className="text-red-400 text-[10px] normal-case font-normal ml-1">(obrigatório)</span>}
                 </label>
                 <input
                   type="text"
@@ -201,7 +201,7 @@ export default function AIForm() {
               </div>
               <div className="flex flex-col gap-2">
                 <label className="text-xs font-mono font-bold text-gray-300 uppercase tracking-wider">
-                  Instagram *
+                  Instagram * {!formData.instagram && <span className="text-red-400 text-[10px] normal-case font-normal ml-1">(obrigatório)</span>}
                 </label>
                 <input
                   type="text"
@@ -239,7 +239,7 @@ export default function AIForm() {
             {/* Canais */}
             <div className="space-y-3">
               <label className="text-xs font-mono font-bold text-gray-300 uppercase tracking-wider block">
-                Quais canais você usa hoje? (Selecione todos)
+                Quais canais você usa hoje? (Selecione todos) {formData.mainChannels.length === 0 && <span className="text-red-400 text-[10px] normal-case font-normal ml-1">(obrigatório)</span>}
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {channelsList.map((ch) => (
@@ -264,7 +264,7 @@ export default function AIForm() {
             {/* Maior dificuldade */}
             <div className="space-y-3">
               <label className="text-xs font-mono font-bold text-gray-300 uppercase tracking-wider block">
-                Qual sua maior dificuldade hoje? *
+                Qual sua maior dificuldade hoje? * {!formData.biggestPain && <span className="text-red-400 text-[10px] normal-case font-normal ml-1">(obrigatório)</span>}
               </label>
               <div className="grid grid-cols-1 gap-2">
                 {painsList.map((pain) => (
@@ -287,7 +287,7 @@ export default function AIForm() {
             {/* Investimento em marketing */}
             <div className="space-y-3">
               <label className="text-xs font-mono font-bold text-gray-300 uppercase tracking-wider block">
-                Qual é o seu investimento mensal total em marketing? *
+                Qual é o seu investimento mensal total em marketing? * {!formData.investimento.trim() && <span className="text-red-400 text-[10px] normal-case font-normal ml-1">(obrigatório)</span>}
               </label>
               <input
                 type="text"
