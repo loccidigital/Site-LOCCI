@@ -17,8 +17,7 @@ export default function About() {
               "A LOCCI nasceu em 2024 com a missão de transformar a forma como negócios locais se posicionam no digital."
             </p>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed [text-wrap:pretty]">
-              Criamos a agência motivados por um propósito claro: negócios locais não precisam de pacotes prontos de agências automatizadas. Eles merecem marketing de verdade, feito por quem se importa com o resultado financeiro delas.
-              Somos de carne e osso, dedicados, obstinados. E colocamos o nosso nome, literalmente, em cada projeto que entregamos.
+              Criamos a agência motivados por um propósito claro: negócios locais não precisam de pacotes prontos de agências automatizadas. Eles merecem marketing de verdade, feito por quem se importa! Somos de carne e osso, dedicados, obstinados. E colocamos o nosso nome, literalmente, em cada projeto que entregamos.
             </p>
           </div>
 
