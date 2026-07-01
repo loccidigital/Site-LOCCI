@@ -54,24 +54,24 @@ export default function CaptacaoEventos({ onCtaClick }: CaptacaoEventosProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
 
           {/* Left panel: Bullet storytelling */}
-          <div className="lg:col-span-5 space-y-6" id="event-narrative">
+          <div className="lg:col-span-5 flex flex-col gap-6 text-left" id="event-narrative">
             {/* Texto narrativo — visível em todos os tamanhos */}
-            <div className="space-y-4">
-              <h3 className="text-2xl font-display font-extrabold text-white [text-wrap:pretty]">
+            <div className="flex flex-col gap-4">
+              <h3 className="text-2xl font-display font-extrabold text-white leading-snug">
                 Seu evento foi incrível, mas você não tem um bom registro para divulgar?
               </h3>
-              <p className="text-gray-400 text-sm sm:text-base leading-relaxed [text-wrap:pretty]">
+              <p className="text-gray-400 text-sm sm:text-base leading-relaxed max-w-md">
                 Celular tremendo e luz estourada não refletem o valor real do que aconteceu. A LOCCI captura tudo com equipamentos profissionais e transforma o momento em conteúdo que gera autoridade e novos negócios.
               </p>
             </div>
 
             {/* Botão — visível apenas no desktop aqui */}
-            <div className="pt-4 hidden lg:flex">
+            <div className="hidden lg:flex">
               <button
                 onClick={onCtaClick}
                 className="px-6 py-3.5 rounded-xl font-bold text-xs tracking-wider uppercase text-navy-950 bg-gold-500 hover:bg-gold-600 transition-all inline-flex items-center gap-2 cursor-pointer"
               >
-                Garantir Captura no Meu Evento
+                Garanta que seu evento seja incrível
                 <Play className="w-3.5 h-3.5 fill-navy-950 text-navy-950" />
               </button>
             </div>
@@ -90,11 +90,10 @@ export default function CaptacaoEventos({ onCtaClick }: CaptacaoEventosProps) {
                 {/* Video container 9:16 */}
                 <div className="relative rounded-[32px] overflow-hidden aspect-[9/16]">
                   <iframe
-                    src="https://www.youtube.com/embed/FgP1PKVKXp8?rel=0&modestbranding=1&playsinline=1"
+                    src="https://www.youtube.com/embed/FgP1PKVKXp8?autoplay=1&mute=1&loop=1&playlist=FgP1PKVKXp8&rel=0&modestbranding=1&playsinline=1&controls=0"
                     title="Captação de Eventos LOCCI — Cobertura Audiovisual Profissional"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                    loading="lazy"
                     className="absolute inset-0 w-full h-full"
                   />
                 </div>
@@ -159,7 +158,7 @@ export default function CaptacaoEventos({ onCtaClick }: CaptacaoEventosProps) {
             onClick={onCtaClick}
             className="w-full max-w-sm px-6 py-4 rounded-xl font-bold text-xs tracking-wider uppercase text-navy-950 bg-gold-500 hover:bg-gold-600 transition-all inline-flex items-center justify-center gap-2 cursor-pointer"
           >
-            Garantir Captura no Meu Evento
+            Garanta que seu evento seja incrível
             <Play className="w-3.5 h-3.5 fill-navy-950 text-navy-950" />
           </button>
         </div>
