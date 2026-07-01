@@ -12,7 +12,7 @@ export default function CaseStudy() {
     },
     {
       title: "03. Captação & Reels",
-      desc: "Capturamos fotos e tomadas em vídeo cinematográficas do showroom, revelando a textura e luxo dos materiais para as mídias sociais."
+      desc: "Capturamos fotos e vídeos roteirizados de qualidade, transmitindo para as redes sociais os valores da empresa."
     },
     {
       title: "04. Funil de Anúncios",
@@ -54,7 +54,7 @@ export default function CaseStudy() {
                   <p className="text-xs text-gray-400">Revestimentos e Acabamentos</p>
                 </div>
                 <span className="px-2.5 py-1 rounded bg-gold-500/10 border border-gold-500/30 text-[10px] text-gold-500 font-mono uppercase">
-                  Estudo de Caso
+                  Resultado Certo
                 </span>
               </div>
 
@@ -106,8 +106,8 @@ export default function CaseStudy() {
           {/* Right panel */}
           <div className="lg:col-span-6 flex flex-col justify-between" id="case-deliverables">
             <div className="space-y-6">
-              <h3 className="text-2xl font-display font-black text-navy-950 [text-wrap:pretty]">
-                Como construímos essa história de sucesso do absoluto zero:
+              <h3 className="text-2xl font-display font-black text-navy-950">
+                Como construímos essa história<br />de sucesso do absoluto zero:
               </h3>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
