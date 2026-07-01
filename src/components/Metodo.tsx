@@ -6,7 +6,7 @@ interface MetodoProps {
 }
 
 export default function Metodo({ onCtaClick }: MetodoProps) {
-  const [activeContrastTab, setActiveContrastTab] = useState<"with" | "without">("with");
+  const [activeContrastTab, setActiveContrastTab] = useState<"with" | "without">("without");
 
   const pillars = [
     {
@@ -44,11 +44,11 @@ export default function Metodo({ onCtaClick }: MetodoProps) {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
 
         {/* Title block */}
-        <div className="max-w-4xl mx-auto text-center mb-16" id="metodo-intro">
+        <div className="max-w-5xl mx-auto text-center mb-16" id="metodo-intro">
           <span className="text-xs font-mono font-bold text-gold-500 uppercase tracking-widest bg-white/5 px-3 py-1.5 rounded-full border border-white/10">
             Metodologia LOCCI
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-black tracking-tight text-white mt-4 mb-6 whitespace-nowrap">
+          <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-display font-black tracking-tight text-white mt-4 mb-6 lg:whitespace-nowrap">
             Método P² — Prático e Personalizado
           </h2>
           <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
@@ -61,7 +61,7 @@ export default function Metodo({ onCtaClick }: MetodoProps) {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8 border-b border-white/5 pb-6">
             <div>
               <h3 className="text-xl font-display font-bold text-white [text-wrap:pretty]">Como você quer operar o marketing da sua empresa?</h3>
-              <p className="text-xs sm:text-sm text-gray-400">Clique nos estados abaixo para ver a diferença prática.</p>
+              <p className="text-xs sm:text-sm text-gray-400">Veja como sua empresa ficaria com o método LOCCI.</p>
             </div>
 
             {/* Toggler */}
@@ -169,15 +169,15 @@ export default function Metodo({ onCtaClick }: MetodoProps) {
                   <>
                     <li className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-300">
                       <div className="w-1.5 h-1.5 bg-gold-500 rounded-full mt-2" />
-                      <span><strong>Totalmente Rastreado:</strong> Você sabe de onde vem o lead, o custo exato e o retorno.</span>
+                      <span><strong>Totalmente Rastreado:</strong> Você sabe de onde vem o lead, o custo exato e o retorno</span>
                     </li>
                     <li className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-300">
                       <div className="w-1.5 h-1.5 bg-gold-500 rounded-full mt-2" />
-                      <span><strong>Audiovisual Cinema:</strong> Captação presencial que transmite autoridade inquestionável imediata.</span>
+                      <span><strong>Vídeos:</strong> Captação presencial que transmite autoridade imediata</span>
                     </li>
                     <li className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-300">
                       <div className="w-1.5 h-1.5 bg-gold-500 rounded-full mt-2" />
-                      <span><strong>Posicionamento Local:</strong> Domínio absoluto do Google e do Instagram na sua área comercial.</span>
+                      <span><strong>Posicionamento Local:</strong> Domínio absoluto do Google e do Instagram</span>
                     </li>
                   </>
                 )}
