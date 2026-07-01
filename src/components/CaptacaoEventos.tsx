@@ -8,25 +8,25 @@ export default function CaptacaoEventos({ onCtaClick }: CaptacaoEventosProps) {
   const deliveries = [
     {
       title: "Todo o Material Bruto no Drive",
-      desc: "Tudo o que foi captado no evento fica guardado, organizado de forma impecável e disponível no Google Drive no mesmo dia, pronto para você armazenar, revisar e usar quando quiser.",
+      desc: "Tudo o que foi captado no evento fica guardado, organizado de forma impecável e disponível no Google Drive, pronto para revisar e usar quando quiser.",
       icon: Download,
       color: "from-blue-500/20 to-blue-600/10"
     },
     {
       title: "Vídeo Editado e Finalizado",
-      desc: "Um vídeo cinematográfico completo das principais cenas do evento, com transições dinâmicas, tratamento professional de cores e áudio ideal, pronto para causar impacto imediato nas suas redes.",
+      desc: "Um vídeo completo das principais cenas do evento, com transições dinâmicas, tratamento professional de cores e áudio ideal, pronto para causar impacto imediato nas suas redes.",
       icon: Film,
       color: "from-gold-500/20 to-gold-600/10"
     },
     {
       title: "Stories em Tempo Real durante o Evento",
-      desc: "Seu evento ganha vida na internet enquanto ele ainda está acontecendo. Capturamos e postamos pílulas dinâmicas de bastidores, mantendo seu público conectado e gerando desejo espontâneo.",
+      desc: "Seu evento ganha vida na internet enquanto ele ainda está acontecendo. Capturamos e postamos os bastidores, mantendo seu público conectado e gerando desejo espontâneo.",
       icon: Send,
       color: "from-purple-500/20 to-purple-600/10"
     },
     {
       title: "Bônus: Fotos do Evento Editadas",
-      desc: "Além do formato em vídeo, nossa equipe captura e entrega imagens estáticas profissionais tratadas e ajustadas para sua equipe publicar em carrosséis ou materiais institucionais adicionais.",
+      desc: "Além do formato em vídeo, nossa equipe captura e entrega imagens estáticas profissionais tratadas e ajustadas para você publicar em carrosséis ou vídeos.",
       icon: Camera,
       color: "from-green-500/20 to-green-600/10"
     }
