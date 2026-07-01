@@ -92,7 +92,7 @@ export default function About() {
                 Um computador, um celular e uma convicção
               </h4>
               <p className="text-gray-500 text-xs sm:text-sm leading-relaxed [text-wrap:pretty]">
-                A LOCCI nasce em 2024 motivada pelo cansaço do marketing "de agência tradicional": relatórios complexos sem vendas na conta bancária. Decidimos que negócios locais merecem mais.
+                A LOCCI nasce em 2024 motivada pelo cansaço do marketing "de agência tradicional": relatórios complexos e material genérico. Decidimos que negócios locais merecem mais!
               </p>
             </div>
 
@@ -101,12 +101,12 @@ export default function About() {
               <div className="w-10 h-10 rounded-full bg-navy-950 text-gold-500 flex items-center justify-center font-display font-black text-base mb-5 relative z-10">
                 2
               </div>
-              <span className="text-[10px] font-mono text-gold-600 uppercase tracking-widest font-bold">Método P² Desenvolvido</span>
+              <span className="text-[10px] font-mono text-gold-600 tracking-widest font-bold">Método P² Desenvolvido</span>
               <h4 className="text-base font-display font-bold text-navy-950 mt-1 mb-3 [text-wrap:pretty]">
                 Consolidação de Processos Estratégicos
               </h4>
               <p className="text-gray-500 text-xs sm:text-sm leading-relaxed [text-wrap:pretty]">
-                Após imersão profunda em diversos segmentos locais, criamos o Método P² (Prático e Personalizado) para alinhar a comunicação e canais de intenção como o Google, gerando leads qualificados de forma previsível.
+                Após imersão profunda em diversos segmentos locais, criamos o Método P²-Prático e Personalizado, para alinhar a comunicação e canais de intenção como o Google, gerando leads qualificados de forma previsível.
               </p>
             </div>
 
@@ -120,7 +120,7 @@ export default function About() {
                 Transformando o Cenário Digital
               </h4>
               <p className="text-gray-500 text-xs sm:text-sm leading-relaxed [text-wrap:pretty]">
-                Atendemos contas que chegam até nós antes de ter nome e as transformamos em líderes regionais. Colocamos o nosso nome literalmente em cada entrega.
+                Atendemos empresas que chegam até nós sem identidade no digital e mostramos o caminho claro para o resultado.
               </p>
             </div>
 
