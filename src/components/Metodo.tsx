@@ -1,130 +1,239 @@
-import fotoFundadores from "../public/foto-fundadores.PNG";
+import { useState } from "react";
+import { Compass, CheckCircle2, AlertCircle, ArrowRight } from "lucide-react";
 
-export default function About() {
+interface MetodoProps {
+  onCtaClick: () => void;
+}
+
+export default function Metodo({ onCtaClick }: MetodoProps) {
+  const [activeContrastTab, setActiveContrastTab] = useState<"with" | "without">("with");
+
+  const pillars = [
+    {
+      num: "01",
+      title: "Hiperpersonalização",
+      desc: "Com base nos valores e objetivos da sua empresa, desenvolvemos uma comunicação estratégica exclusiva para transformar a presença digital em uma extensão autêntica da sua marca.",
+      details: ["Estudo aprofundado do segmento", "Tom de voz específico da empresa", "Análise de público geolocalizado"]
+    },
+    {
+      num: "02",
+      title: "Praticidade",
+      desc: "Uma estrutura altamente organizada e transparente que centraliza toda a operação da marca em um só lugar para tornar a comunicação ágil, acessível e eficiente no dia a dia.",
+      details: ["Drive único e organizado", "Centralização de materiais brutos", "Processo rápido de aprovação"]
+    },
+    {
+      num: "03",
+      title: "Estratégia",
+      desc: "Cada decisão é construída com intenção genuína, análise de concorrência e posicionamento inteligente para garantir que a comunicação da sua marca tenha direção, consistência e rentabilidade.",
+      details: ["Direcionamento de anúncios", "Funil comercial integrado", "Foco no lead qualificado"]
+    },
+    {
+      num: "04",
+      title: "Otimização",
+      desc: "Análise contínua de métricas, comportamento do consumidor local e dados de anúncios para refinar as estratégias, otimizar orçamentos e potencializar o crescimento da sua marca.",
+      details: ["Dashboard claro de resultados", "Reunião mensal de alinhamento", "Ajustes de lance em tempo real"]
+    }
+  ];
+
   return (
-    <section id="sobre" className="relative py-24 bg-[#F6F6F6] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="metodo" className="relative py-24 bg-gradient-to-b from-[#101930] to-navy-950 text-white overflow-hidden">
+      {/* Light highlights */}
+      <div className="absolute top-1/3 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7 flex flex-col gap-5">
-            <span className="text-xs font-mono font-bold uppercase tracking-widest text-gold-500">História e Propósito</span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-navy-950 tracking-tight leading-tight [text-wrap:pretty]">
-              Por trás da LOCCI, tem história!
-            </h2>
-            <div className="h-1 w-20 bg-gold-500 rounded" />
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-            <p className="text-gray-700 text-lg leading-relaxed mt-2 font-medium [text-wrap:pretty]">
-              "A LOCCI nasceu em 2024 com a missão de transformar a forma como negócios locais se posicionam no digital."
-            </p>
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed [text-wrap:pretty]">
-              Criamos a agência motivados por um propósito claro: negócios locais não precisam de pacotes prontos de agências automatizadas. Eles merecem marketing de verdade, feito por quem se importa! Somos de carne e osso, dedicados, obstinados. E colocamos o nosso nome, literalmente, em cada projeto que entregamos.
-            </p>
+        {/* Title block */}
+        <div className="max-w-4xl mx-auto text-center mb-16" id="metodo-intro">
+          <span className="text-xs font-mono font-bold text-gold-500 uppercase tracking-widest bg-white/5 px-3 py-1.5 rounded-full border border-white/10">
+            Metodologia LOCCI
+          </span>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-black tracking-tight text-white mt-4 mb-6 whitespace-nowrap">
+            Método P² — Prático e Personalizado
+          </h2>
+          <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+            Nada de pacote genérico. Nada de estratégia copiada. O Método P² é o jeito LOCCI de trabalhar: mergulhamos no seu negócio, entendemos sua história, valores e objetivos, e montamos um plano de ação claro, direto e acompanhável.
+          </p>
+        </div>
+
+        {/* Interactive Contrast Section: Sem o Método vs Com o Método */}
+        <div className="bg-navy-900/60 p-6 sm:p-8 rounded-2xl border border-white/10 shadow-2xl mb-20">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8 border-b border-white/5 pb-6">
+            <div>
+              <h3 className="text-xl font-display font-bold text-white [text-wrap:pretty]">Como você quer operar o marketing da sua empresa?</h3>
+              <p className="text-xs sm:text-sm text-gray-400">Clique nos estados abaixo para ver a diferença prática.</p>
+            </div>
+
+            {/* Toggler */}
+            <div className="flex bg-navy-950 p-1.5 rounded-xl border border-white/5 select-none font-mono text-xs">
+              <button
+                onClick={() => setActiveContrastTab("without")}
+                className={`px-4 py-2 rounded-lg cursor-pointer transition-all ${
+                  activeContrastTab === "without"
+                    ? "bg-red-500/20 text-red-400 border border-red-500/30"
+                    : "text-gray-400 hover:text-white"
+                }`}
+                id="tab-without-metodo"
+              >
+                Sem o Método P²
+              </button>
+              <button
+                onClick={() => setActiveContrastTab("with")}
+                className={`px-4 py-2 rounded-lg cursor-pointer transition-all ${
+                  activeContrastTab === "with"
+                    ? "bg-gold-500 text-navy-950 font-bold"
+                    : "text-gray-400 hover:text-white"
+                }`}
+                id="tab-with-metodo"
+              >
+                Com o Método P²
+              </button>
+            </div>
           </div>
 
-          {/* Founders Card */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative rounded-2xl overflow-hidden bg-navy-950/95 border border-white/5 py-10 px-8 shadow-2xl text-center group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-full blur-2xl pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl pointer-events-none" />
+          {/* Contrast Content Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
-              <div className="relative z-10">
-                <div className="flex justify-center mb-6">
-                  <img
-                    src={fotoFundadores}
-                    alt="Emanuel e Camila - Fundadores da LOCCI"
-                    className="w-36 h-36 rounded-full object-cover border-2 border-gold-500/40 shadow-xl"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = 'none';
-                      const fallback = document.getElementById('founders-fallback');
-                      if (fallback) fallback.style.display = 'flex';
-                    }}
-                  />
-                  <div id="founders-fallback" className="hidden justify-center -space-x-4">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-gold-600 to-gold-200 p-[1px] shadow-lg">
-                      <div className="w-full h-full bg-navy-950 rounded-full flex items-center justify-center font-display font-black text-white text-base">E</div>
-                    </div>
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-gold-600 to-gold-200 p-[1px] shadow-lg">
-                      <div className="w-full h-full bg-navy-950 rounded-full flex items-center justify-center font-display font-black text-white text-base">C</div>
+            {/* Visual simulation representation */}
+            <div className="bg-navy-950 p-6 rounded-xl border border-white/5 h-[280px] flex flex-col justify-between relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-white/2 rounded-full pointer-events-none" />
+
+              {activeContrastTab === "without" ? (
+                <>
+                  <div className="flex items-center gap-2 text-red-500">
+                    <AlertCircle className="w-5 h-5" />
+                    <span className="font-mono text-xs font-bold uppercase tracking-widest">Totalmente Perdido</span>
+                  </div>
+                  <div className="flex-1 flex items-center justify-center py-4">
+                    <div className="w-full max-w-[280px] stroke-red-500/60 flex flex-col items-center gap-2 text-center">
+                      <div className="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 text-lg animate-pulse">❓</div>
+                      <p className="text-xs text-gray-400 max-w-[220px] [text-wrap:pretty]">Anúncios jogados no lixo, posts diários sem engajamento, dependência do acaso e zero previsibilidade comercial.</p>
                     </div>
                   </div>
-                </div>
-
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] text-gold-500 uppercase tracking-widest font-mono mb-4">
-                  Fundadores
-                </div>
-
-                <h3 className="text-xl font-display font-bold text-white">Emanuel e Camila</h3>
-                <p className="text-xs font-mono text-gray-400 mt-1 uppercase">LOCCI</p>
-
-                <p className="text-gray-300 text-xs mt-4 leading-relaxed max-w-sm mx-auto [text-wrap:pretty]">
-                  "Cuidamos de cada funil estratégico pessoalmente. Na LOCCI, seu projeto não é tratado por estagiários genéricos; nós mesmos validamos e acompanhamos toda a operação."
-                </p>
-
-                <div className="flex justify-center gap-8 mt-8 pt-6 border-t border-white/5">
-                  <div className="text-center">
-                    <span className="block text-white font-bold text-sm">Emanuel</span>
-                    <span className="text-[10px] text-gray-500 font-mono uppercase whitespace-nowrap">Tráfego & Análise</span>
+                  <span className="text-[10px] text-gray-600 font-mono text-center block uppercase tracking-widest">Insegurança & Dinheiro no Ralo</span>
+                </>
+              ) : (
+                <>
+                  <div className="flex items-center gap-2 text-gold-500">
+                    <CheckCircle2 className="w-5 h-5 text-gold-500" />
+                    <span className="font-mono text-xs font-bold uppercase tracking-widest">Solução Clara & Sucessiva</span>
                   </div>
-                  <div className="w-px bg-white/10 self-stretch" />
-                  <div className="text-center">
-                    <span className="block text-white font-bold text-sm">Camila</span>
-                    <span className="text-[10px] text-gray-500 font-mono uppercase whitespace-nowrap">Estratégia & Posicionamento</span>
+                  <div className="flex-1 flex items-center justify-center py-4">
+                    <div className="relative w-full max-w-[340px] flex items-center justify-between">
+                      <div className="text-center">
+                        <div className="w-8 h-8 rounded-full bg-gold-500/20 text-gold-500 flex items-center justify-center text-xs font-bold mx-auto">1</div>
+                        <span className="text-[9px] text-gray-400 block mt-1">Diagnóstico</span>
+                      </div>
+                      <div className="flex-1 border-t-2 border-dashed border-gold-500/30 mx-2" />
+                      <div className="text-center">
+                        <div className="w-8 h-8 rounded-full bg-gold-500/20 text-gold-500 flex items-center justify-center text-xs font-bold mx-auto">2</div>
+                        <span className="text-[9px] text-gray-400 block mt-1">Ativação</span>
+                      </div>
+                      <div className="flex-1 border-t-2 border-dashed border-gold-500/30 mx-2" />
+                      <div className="text-center">
+                        <div className="w-8 h-8 rounded-full bg-gold-500 text-navy-950 flex items-center justify-center text-xs font-bold mx-auto">3</div>
+                        <span className="text-[9px] text-gold-500 block font-bold mt-1">Venda Direta</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
+                  <span className="text-[10px] text-gold-500 font-mono text-center block uppercase tracking-widest">Processo previsível de captação comercial</span>
+                </>
+              )}
             </div>
+
+            {/* Explanatory text grid */}
+            <div className="flex flex-col justify-center gap-4">
+              <h4 className="text-lg font-display font-semibold text-white [text-wrap:pretty]">
+                {activeContrastTab === "without"
+                  ? "As dores do marketing genérico tradicional"
+                  : "Por que o Método P² funciona de verdade"
+                }
+              </h4>
+              <ul className="space-y-3" id="contrast-checklist">
+                {activeContrastTab === "without" ? (
+                  <>
+                    <li className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-400">
+                      <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-2" />
+                      <span>Copiar cegamente posts sem uma identidade ou propósito comercial.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-400">
+                      <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-2" />
+                      <span>Anúncios configurados incorretamente que queimam dinheiro em cliques de curiosos.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-400">
+                      <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-2" />
+                      <span>Falta de clareza: você não sabe de onde vêm seus leads ou por que as vendas esfriaram.</span>
+                    </li>
+                  </>
+                ) : (
+                  <>
+                    <li className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-300">
+                      <div className="w-1.5 h-1.5 bg-gold-500 rounded-full mt-2" />
+                      <span><strong>Totalmente Rastreado:</strong> Você sabe de onde vem o lead, o custo exato e o retorno.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-300">
+                      <div className="w-1.5 h-1.5 bg-gold-500 rounded-full mt-2" />
+                      <span><strong>Audiovisual Cinema:</strong> Captação presencial que transmite autoridade inquestionável imediata.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-300">
+                      <div className="w-1.5 h-1.5 bg-gold-500 rounded-full mt-2" />
+                      <span><strong>Posicionamento Local:</strong> Domínio absoluto do Google e do Instagram na sua área comercial.</span>
+                    </li>
+                  </>
+                )}
+              </ul>
+            </div>
+
           </div>
         </div>
 
-        {/* Timeline: Jornada da LOCCI */}
-        <div className="mt-20">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
-            {/* Connecting line desktop */}
-            <div className="hidden md:block absolute top-8 left-[16.66%] right-[16.66%] h-[2px] bg-gradient-to-r from-gold-500/30 via-gold-500/60 to-gold-500/30 pointer-events-none" />
+        {/* Pilares do Método P² Grid */}
+        <h3 className="text-2xl sm:text-3xl font-display font-black text-center text-white mb-2 [text-wrap:pretty]">
+          Pilares Operacionais do Método P²
+        </h3>
+        <p className="text-gray-400 text-sm text-center max-w-lg mx-auto mb-12 [text-wrap:pretty]">
+          Garantimos estrutura, velocidade e direção estratégica integrada para sua empresa faturar mais.
+        </p>
 
-            {/* Card 1 */}
-            <div className="relative bg-white border border-gray-200 rounded-2xl p-6 pb-8 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-10 h-10 rounded-full bg-navy-950 text-gold-500 flex items-center justify-center font-display font-black text-base mb-5 relative z-10">
-                1
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="pilares-cards">
+          {pillars.map((pilar, index) => (
+            <div
+              key={index}
+              className="bg-navy-900 border border-white/5 rounded-2xl p-6 hover:border-gold-500/40 hover:bg-navy-900/80 transition-all duration-300 flex flex-col justify-between group cursor-default"
+              id={`pilar-${pilar.num}`}
+            >
+              <div>
+                <span className="font-mono text-xs font-bold text-gold-500 tracking-widest block mb-4 group-hover:scale-105 transition-transform">
+                  ★ PILAR {pilar.num}
+                </span>
+                <h4 className="text-lg font-display font-bold text-white mb-3 group-hover:text-gold-200 transition-colors">
+                  {pilar.title}
+                </h4>
+                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6 [text-wrap:pretty]">
+                  {pilar.desc}
+                </p>
               </div>
-              <span className="text-[10px] font-mono text-gold-600 uppercase tracking-widest font-bold">2024 (O Início)</span>
-              <h4 className="text-base font-display font-bold text-navy-950 mt-1 mb-3 [text-wrap:pretty]">
-                Um computador, um celular e uma convicção
-              </h4>
-              <p className="text-gray-500 text-xs sm:text-sm leading-relaxed [text-wrap:pretty]">
-                A LOCCI nasce em 2024 motivada pelo cansaço do marketing "de agência tradicional": relatórios complexos e material genérico. Decidimos que negócios locais merecem mais!
-              </p>
-            </div>
-
-            {/* Card 2 */}
-            <div className="relative bg-white border border-gray-200 rounded-2xl p-6 pb-8 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-10 h-10 rounded-full bg-navy-950 text-gold-500 flex items-center justify-center font-display font-black text-base mb-5 relative z-10">
-                2
+              <div className="border-t border-white/5 pt-4 space-y-2">
+                {pilar.details.map((detail, dIdx) => (
+                  <span key={dIdx} className="block text-[11px] text-gray-500 font-mono">
+                    • {detail}
+                  </span>
+                ))}
               </div>
-              <span className="text-[10px] font-mono text-gold-600 tracking-widest font-bold">Método P² Desenvolvido</span>
-              <h4 className="text-base font-display font-bold text-navy-950 mt-1 mb-3 [text-wrap:pretty]">
-                Consolidação de Processos Estratégicos
-              </h4>
-              <p className="text-gray-500 text-xs sm:text-sm leading-relaxed [text-wrap:pretty]">
-                Após imersão profunda em diversos segmentos locais, criamos o Método P²-Prático e Personalizado, para alinhar a comunicação e canais de intenção como o Google, gerando leads qualificados de forma previsível.
-              </p>
             </div>
+          ))}
+        </div>
 
-            {/* Card 3 */}
-            <div className="relative bg-white border border-gold-200 rounded-2xl p-6 pb-8 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-10 h-10 rounded-full bg-gold-500 text-navy-950 flex items-center justify-center font-display font-black text-base mb-5 relative z-10">
-                3
-              </div>
-              <span className="text-[10px] font-mono text-gold-600 uppercase tracking-widest font-bold">Hoje &amp; Futuro</span>
-              <h4 className="text-base font-display font-bold text-navy-950 mt-1 mb-3 [text-wrap:pretty]">
-                Transformando o Cenário Digital
-              </h4>
-              <p className="text-gray-500 text-xs sm:text-sm leading-relaxed [text-wrap:pretty]">
-                Atendemos empresas que chegam até nós sem identidade no digital e mostramos o caminho claro para o resultado.
-              </p>
-            </div>
-
-          </div>
+        {/* Action Bottom */}
+        <div className="text-center mt-12">
+          <button
+            onClick={onCtaClick}
+            className="group px-6 py-3.5 rounded-xl font-bold text-xs tracking-wider uppercase text-navy-950 bg-gold-500 hover:bg-gold-600 transition-all inline-flex items-center gap-2 cursor-pointer"
+            id="metodo-cta-bottom"
+          >
+            Quero aplicar a metodologia na minha empresa
+            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+          </button>
         </div>
 
       </div>
