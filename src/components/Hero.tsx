@@ -100,7 +100,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
                 <span className="w-3 h-3 rounded-full bg-yellow-500/60" />
                 <span className="w-3 h-3 rounded-full bg-green-500/60" />
               </div>
-              <span className="text-[10px] text-gray-500 font-mono uppercase tracking-widest">loccidigital.com</span>
+              <span className="text-[10px] text-gray-500 font-mono uppercase tracking-widest">locci.com</span>
               <div className="w-3 h-3" />
             </div>
 
