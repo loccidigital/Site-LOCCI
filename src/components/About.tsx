@@ -103,10 +103,10 @@ export default function About() {
               </div>
               <span className="text-[10px] font-mono text-gold-600 tracking-widest font-bold">Método P² Desenvolvido</span>
               <h4 className="text-base font-display font-bold text-navy-950 mt-1 mb-3 [text-wrap:pretty]">
-                Consolidação de Processos Estratégicos
+                Consolidação de processos estratégicos
               </h4>
               <p className="text-gray-500 text-xs sm:text-sm leading-relaxed [text-wrap:pretty]">
-                Após imersão profunda em diversos segmentos locais, criamos o Método P²-Prático e Personalizado, para alinhar a comunicação e canais de intenção como o Google, gerando leads qualificados de forma previsível.
+                Após imersão profunda em diversos segmentos locais, criamos o Método P² - Prático e Personalizado, para alinhar a comunicação e canais de intenção como o Google, gerando leads qualificados de forma previsível.
               </p>
             </div>
 
@@ -117,7 +117,7 @@ export default function About() {
               </div>
               <span className="text-[10px] font-mono text-gold-600 uppercase tracking-widest font-bold">Hoje &amp; Futuro</span>
               <h4 className="text-base font-display font-bold text-navy-950 mt-1 mb-3 [text-wrap:pretty]">
-                Transformando o Cenário Digital
+                Transformando o cenário digital
               </h4>
               <p className="text-gray-500 text-xs sm:text-sm leading-relaxed [text-wrap:pretty]">
                 Atendemos empresas que chegam até nós sem identidade no digital e mostramos o caminho claro para o resultado.
