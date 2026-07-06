@@ -44,7 +44,7 @@ export default function Footer({ onNavClick }: FooterProps) {
           </div>
 
           <p className="text-sm leading-relaxed text-gray-400 max-w-[280px]">
-            A LOCCI é uma agência de marketing digital, construída com o desejo e foco de transformar o marketing de negócios locais.
+            A LOCCI é uma agência de marketing digital, construída com o desejo e foco de transformar o marketing de<br className="sm:hidden" />{" "}negócios locais.
           </p>
 
           {/* Social icons */}
