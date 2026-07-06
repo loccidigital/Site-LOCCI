@@ -12,7 +12,7 @@ export default function CaseStudy() {
     },
     {
       title: "03. Captação & Reels",
-      desc: "Capturamos fotos e vídeos roteirizados de qualidade, transmitindo para as redes sociais os valores da empresa."
+      desc: <>Capturamos fotos e vídeos roteirizados de qualidade, transmitindo para as redes sociais os <br />valores da empresa.</>
     },
     {
       title: "04. Funil de Anúncios",
