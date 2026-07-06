@@ -44,7 +44,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
             id="hero-subtitle"
           >
             Nós transformamos a presença digital de empresas com método e clareza.
-            Sem enrolação, sem achismo, apenas estratégia que funciona.
+            Sem enrolação, sem achismo, apenas<br className="sm:hidden" />{" "}estratégia que funciona
           </p>
 
           {/* CTAs */}
