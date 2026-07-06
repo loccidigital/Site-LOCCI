@@ -58,16 +58,16 @@ export default function CaseStudy() {
                 </span>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 mt-6">
-                <div className="bg-white/5 p-4 rounded-xl border border-white/5">
-                  <span className="text-[10px] text-gray-400 font-mono uppercase block">Status Inicial</span>
-                  <span className="text-sm font-semibold text-red-400 block mt-1">Zero Clientes Digitais</span>
-                  <span className="text-[9px] text-gray-500">Apenas uma ideia no papel</span>
+              <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-6">
+                <div className="bg-white/5 p-3 sm:p-4 rounded-xl border border-white/5">
+                  <span className="text-[9px] sm:text-[10px] text-gray-400 font-mono uppercase block">Status Inicial</span>
+                  <span className="text-xs sm:text-sm font-semibold text-red-400 block mt-1 leading-tight">Zero Clientes Digitais</span>
+                  <span className="text-[9px] text-gray-500 leading-tight block mt-1">Apenas uma ideia no papel</span>
                 </div>
-                <div className="bg-white/5 p-4 rounded-xl border border-gold-500/10">
-                  <span className="text-[10px] text-gold-500 font-mono uppercase block">Resultado Atual</span>
-                  <span className="text-base font-bold text-green-400 block mt-1">+40 Leads/mês</span>
-                  <span className="text-[9px] text-gray-500">Faturamento local previsível</span>
+                <div className="bg-white/5 p-3 sm:p-4 rounded-xl border border-gold-500/10">
+                  <span className="text-[9px] sm:text-[10px] text-gold-500 font-mono uppercase block">Resultado Atual</span>
+                  <span className="text-sm sm:text-base font-bold text-green-400 block mt-1 leading-tight">+40 Leads/mês</span>
+                  <span className="text-[9px] text-gray-500 leading-tight block mt-1">Faturamento local previsível</span>
                 </div>
               </div>
 
