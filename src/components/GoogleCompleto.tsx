@@ -21,7 +21,7 @@ export default function GoogleCompleto({ onCtaClick }: GoogleCompletoProps) {
   ];
 
   return (
-    <section id="google-completo" className="relative py-24 bg-[#F6F6F6] border-y border-gold-200/50 overflow-hidden" style={{ '--color-gold-200': '#A7774A', '--color-gold-500': '#A7774A', '--color-gold-600': '#8B5E38' } as { [key: string]: string }}>
+    <section id="google-completo" className="relative py-24 bg-[#F6F6F6] border-y border-gold-200/50 overflow-hidden" style={{ '--color-gold-200': '#A7774A', '--color-gold-500': '#A7774A', '--color-gold-600': '#8B5E38' } as any}>
 
       {/* Decoração Google colorida por trás do título */}
       <div className="absolute top-0 left-0 right-0 flex justify-center items-start pt-[13%] sm:pt-[7%] md:pt-[3%] opacity-[0.18] pointer-events-none select-none overflow-hidden">
