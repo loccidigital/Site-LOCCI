@@ -21,7 +21,7 @@ export default function GoogleCompleto({ onCtaClick }: GoogleCompletoProps) {
   ];
 
   return (
-    <section id="google-completo" className="relative py-24 bg-[#F6F6F6] border-y border-gold-200/50 overflow-hidden" style={{ '--color-gold-200': '#A7774A', '--color-gold-500': '#A7774A', '--color-gold-600': '#8B5E38' } as React.CSSProperties}>
+    <section id="google-completo" className="relative py-24 bg-[#F6F6F6] border-y border-gold-200/50 overflow-hidden" style={{ '--color-gold-200': '#A7774A', '--color-gold-500': '#A7774A', '--color-gold-600': '#8B5E38' } as { [key: string]: string }}>
 
       {/* Decoração Google colorida por trás do título */}
       <div className="absolute top-0 left-0 right-0 flex justify-center items-start pt-[13%] sm:pt-[7%] md:pt-[3%] opacity-[0.18] pointer-events-none select-none overflow-hidden">
@@ -157,7 +157,7 @@ export default function GoogleCompleto({ onCtaClick }: GoogleCompletoProps) {
               Vamos colocar seu negócio frente a frente de quem está procurando você
             </h3>
             <p className="text-xs sm:text-sm text-gray-400 max-w-xl [text-wrap:pretty]">
-              Deixe nossa equipe elevar sua presença no Google. Iremos mapear o seu perfil atual e apontar exatamente onde você está perdendo vendas de forma gratuita
+              Deixe nossa equipe auditar sua presença no Google. Iremos mapear o seu perfil atual e apontar exatamente onde você está perdendo vendas de forma gratuita.
             </p>
             <button
               onClick={onCtaClick}
