@@ -133,14 +133,14 @@ export default function CaseStudy() {
             <span className="absolute top-4 left-6 text-7xl font-display text-gold-500/20 select-none pointer-events-none">"</span>
             <div className="relative z-10 flex flex-col gap-6">
               <p className="text-navy-950 text-base sm:text-lg lg:text-xl font-medium italic leading-relaxed text-center [text-wrap:pretty]">
-                "Muito obrigada por toda a ajuda gente, tá tudo um sonho. Vocês pegaram nosso sonho, uma ideia que a gente só tinha na cabeça e tornaram real."
+                "Muito obrigada por toda a ajuda gente, tá tudo um sonho. Vocês pegaram nosso sonho, uma ideia que a gente só tinha na cabeça<br className="sm:hidden" />{" "}e tornaram real."
               </p>
               <div className="flex items-center justify-center gap-3">
                 <div className="w-11 h-11 rounded-full bg-navy-900 text-white flex items-center justify-center font-display font-bold text-sm">
                   C
                 </div>
                 <div>
-                  <h4 className="font-display font-bold text-navy-900 sm:text-base">Kátia</h4>
+                  <h4 className="font-display font-bold text-navy-900 sm:text-base">Cátia</h4>
                   <p className="text-xs text-gray-500 font-mono uppercase">Fundadora, Casa Travertino</p>
                 </div>
               </div>
