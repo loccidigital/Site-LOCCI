@@ -120,7 +120,7 @@ export default function About() {
                 Transformando o Cenário Digital
               </h4>
               <p className="text-gray-500 text-xs sm:text-sm leading-relaxed [text-wrap:pretty]">
-                Atendemos empresas que chegam até nós sem identidade no digital e mostramos o caminho claro para o resultado.
+                Atendemos empresas que chegam até nós sem identidade no digital e mostramos o caminho claro<br className="sm:hidden" />{" "}para o resultado.
               </p>
             </div>
 
