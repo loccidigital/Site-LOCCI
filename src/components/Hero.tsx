@@ -31,9 +31,8 @@ export default function Hero({ onCtaClick }: HeroProps) {
             id="hero-title"
           >
             Seu negócio merece um{" "}
-            <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-gold-500 via-gold-200 to-gold-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-500 via-gold-200 to-gold-600">
               marketing
-              <span className="absolute bottom-1.5 left-0 right-0 h-1 bg-gold-500/40 rounded-full" />
             </span>{" "}
             que funcione de verdade
           </h1>
@@ -44,7 +43,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
             id="hero-subtitle"
           >
             Nós transformamos a presença digital de empresas com método e clareza.
-            Sem enrolação, sem achismo, apenas<br className="sm:hidden" />{" "}estratégia que funciona
+            Sem enrolação, sem achismo, apenas estratégia que funciona.
           </p>
 
           {/* CTAs */}
