@@ -60,15 +60,15 @@ export default function About() {
                   "Cuidamos de cada funil estratégico pessoalmente. Na LOCCI, seu projeto não é tratado por estagiários genéricos; nós mesmos validamos e acompanhamos toda a operação."
                 </p>
 
-                <div className="flex justify-center gap-8 mt-8 pt-6 border-t border-white/5">
-                  <div className="text-center">
+                <div className="flex mt-8 pt-6 border-t border-white/5">
+                  <div className="flex-1 text-center">
                     <span className="block text-white font-bold text-sm">Emanuel</span>
-                    <span className="text-[10px] text-gray-500 font-mono uppercase whitespace-nowrap">Tráfego & Análise</span>
+                    <span className="text-[10px] text-gray-500 font-mono uppercase">Tráfego & Análise</span>
                   </div>
                   <div className="w-px bg-white/10 self-stretch" />
-                  <div className="text-center">
+                  <div className="flex-1 text-center">
                     <span className="block text-white font-bold text-sm">Camila</span>
-                    <span className="text-[10px] text-gray-500 font-mono uppercase whitespace-nowrap">Estratégia & Posicionamento</span>
+                    <span className="text-[10px] text-gray-500 font-mono uppercase">Estratégia & Posicionamento</span>
                   </div>
                 </div>
               </div>
