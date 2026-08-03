@@ -19,12 +19,40 @@ function pathToPage(pathname: string): PageType {
   return "main";
 }
 
+// Mapa de paths âncora para IDs de seção
+const anchorPaths: Record<string, string> = {
+  "/metodop2": "metodo",
+  "/metodo-p2": "metodo",
+  "/metodo": "metodo",
+  "/case": "case",
+  "/casa-travertino": "case",
+};
+
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageType>(() =>
     pathToPage(window.location.pathname)
   );
   const [currentTab, setCurrentTab] = useState("home");
   const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // Scroll automático para âncora ao carregar via URL direta
+  useEffect(() => {
+    const sectionId = anchorPaths[window.location.pathname];
+    if (sectionId) {
+      // Limpa o path para não manter a URL de âncora
+      history.replaceState({}, "", "/");
+      const tryScroll = (attempts = 0) => {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+          setCurrentTab(sectionId);
+        } else if (attempts < 10) {
+          setTimeout(() => tryScroll(attempts + 1), 100);
+        }
+      };
+      setTimeout(() => tryScroll(), 300);
+    }
+  }, []);
 
   // Sincroniza estado com botão voltar/avançar do browser
   useEffect(() => {
